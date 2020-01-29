@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Llycafly</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href ="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+   </head>
+   <body>
+      <section class="banner-sec hotel-banner">
+         <div class="banner-overlay">
+            <div class="top-container hidden-xs">
+               <img src="img/lycafly_logo.png">
+            </div>
+            <div class="menu-items header" id="myHeader">
+               <div class="container">
+                  <div class="navbar-header">
+                     <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                     <span class="hidden-md hidden-lg mobile-logo"><img src="img/lycafly_logo.png"></span>
+                  </div>
+                  <div class="navbar-inverse side-collapse in navbar-desktop">
+                     <nav role="navigation" class="navbar-collapse">
+                        <div class="col-md-3 logo hidden-sm hidden-xs"><img src="img/lycafly_logo.png"></div>
+                        <div class="col-md-9 menu-bar">
+                           <ul class="nav navbar-nav">
+                              <li><a href="index.html"><i class="material-icons">flight</i> Flights</a></li>
+                              <li><a href="holidays.html"><i class="material-icons">flight</i><i class="material-icons">hotel</i>Flight + Hotel</a></li>
+                              <li class="active"><a href="hotels.html"><i class="material-icons">hotel</i>Hotels</a></li>
+                              <li><a href="car-hire.html"><i class="material-icons">directions_car</i>Car Hire</a></li>
+                           </ul>
+                        </div>
+                        <div class="col-md-12 support-dtls">
+                           <p class="pull-right"> <span><i class="material-icons">phone</i>902323244344</span> <span><i class="material-icons">work</i>My trip</span></p>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-12 text-center" id="holidays">
+                  <div class="container">
+                     <div id="holidays-dis" style="margin-top:30px;">
+                        <div class="col-md-10 return-cty">
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Departure</label></span>
+                              <input type="text" class="form-control" id="departure" placeholder="">
+                              <i class="material-icons">flight_takeoff</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Destination</label></span>
+                              <input type="text" class="form-control" id="destination" placeholder="">
+                              <i class="material-icons">flight_land</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input id="txtDepDate" value="" size="30" class="calender-input" readonly="readonly"/>
+                              <input id="txtDestDate" class="calender-destinput" value="" readonly="readonly" />
+                              <i class="material-icons">date_range</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input type="dropdown" class="form-control" id="destination" placeholder="Passenger">
+                              <i class="material-icons">people</i>
+                           </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <a href="hotel-search.html"> <button class="btn btn-success btn-livesearch">Find hotels</button></a>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+         </div>
+      </section>
+      <section class="flight-offer">
+         <div class="container">
+            <h2 class="text-center">Latest hotel offers</h2>
+            <p class="text-center">Worldwide, we've got you covered</p>
+            <div class="col-md-12 col-sm-12 col-xs-12 flight-offer-dtls">
+               <div class="col-md-4 col-sm-4 col-xs-12 trending-citiesdis" style="margin-top:20px;">
+                  <img src="img/northamr.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i> North America</span>
+                     </div>
+                     <h3>5 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $558</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12 trending-citiesdis" style="margin-top:20px;">
+                  <img src="img/india1.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Asia</span>
+                     </div>
+                     <h3>4 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $346</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12 trending-citiesdis" style="margin-top:20px;">
+                  <img src="img/thailand1.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Asia</span>
+                     </div>
+                     <h3>3 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $379</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 hidden-sm hidden-xs" style="margin-top: 20px;">
+                <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="offer-content">
+                     <img src="img/Manila.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <h3>4 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $378</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="offer-content">
+                     <img src="img/india.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                    <h3>3 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $788</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="offer-content">
+                     <img src="img/bangkok_1.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+						<h3>5 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $458</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="offer-content">
+                     <img src="img/Manila.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <h3>3 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $378</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="offer-content">
+                     <img src="img/Islamabad.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+						<h3>5 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $670</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+			    <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="offer-content">
+                     <img src="img/Manila.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+						<h3>3 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $378</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+               <div class="col-xs-12 hidden-md visible-sm visible-xs" style="margin-top:30px;">
+                  <div class="owl-carousel owl-theme" id="owl-carousel">
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="offer-content">
+                              <img src="img/india.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <h3>4 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $778</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="offer-content">
+                              <img src="img/bangkok_1.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                            
+                             <h3>3 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $458</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="offer-content">
+                              <img src="img/Manila.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              
+                              <h3>5 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $378</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="offer-content">
+                              <img src="img/Islamabad.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <h3>3 <i class="fa fa-star"></i> Westgate Lakes, Orlando</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $778</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div
+         </div>
+      </section>
+      <section class="popular-cities">
+         <div class="container">
+            <div class="col-md-12 col-sm-12 col-xs-12 flight-offer-dtls">
+               <h2 class="text-center">Cheap hotels in popular cities</h2>
+               <p class="text-center">Find more hotels in great destinations</p>
+               <div class="col-md-4 col-sm-4 col-xs-12 popular-citiesdis" style="margin-top:20px;">
+                  <img src="img/dubai.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Dubai</span>
+                     </div>
+                     <h3><span>Hotels in </span> <br>Dubai</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 3 <i class="fa fa-star"></i> from $558</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12 popular-citiesdis" style="margin-top:20px;">
+                  <img src="img/maldives.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Maldives</span>
+                     </div>
+                     <h3><span>Hotels in </span> <br>Maldives</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 4 <i class="fa fa-star"></i>  from $456</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12 popular-citiesdis" style="margin-top:20px;">
+                  <img src="img/srilanka.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Sri lanka</span>
+                     </div>
+                     <h3><span>Hotels in </span> <br>Sri lanka</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 5 <i class="fa fa-star"></i>  from $569</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 hidden-sm hidden-xs" style="margin-top:20px;">
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/india.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  India</span>
+                     </div>
+                     <h3>Hotels in  Delhi</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price">3 <i class="fa fa-star"></i>  from $345</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/bangkok_1.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Bangkok</span>
+                     </div>
+                     <h3>Hotels in  Bangkok</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price">4 <i class="fa fa-star"></i>  from $678</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/Manila.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>   Manila</span>
+                     </div>
+                     <h3>Hotels in  Manila</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price">5 <i class="fa fa-star"></i>  from $898</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/Islamabad.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Islamabad</span>
+                     </div>
+                     <h3>Hotels in  Islamabad</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price">5 <i class="fa fa-star"></i>  from $564</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/hongkong.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Hong Kong</span>
+                     </div>
+                     <h3>Hotels in  Hong Kong</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 3 <i class="fa fa-star"></i>  from $787</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/New South Wales.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>   New South Wales </span>
+                     </div>
+                     <h3>Hotels in  Islamabad</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 5 <i class="fa fa-star"></i>  from $546</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-12 hidden-md visible-sm visible-xs" style="margin-top:30px;">
+                  <div class="owl-carousel owl-theme" id="owl-carousel1">
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/india.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  India</span>
+                              </div>
+                              <h3>Hotels in  Delhi</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 3 <i class="fa fa-star"></i>  from $898</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/bangkok_1.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Bangkok</span>
+                              </div>
+                              <h3>Hotels in  Bangkok</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 4 <i class="fa fa-star"></i>  from $432</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/Manila.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>   Manila</span>
+                              </div>
+                              <h3>Hotels in  Manila</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 5 <i class="fa fa-star"></i>  from $345</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/Islamabad.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Islamabad</span>
+                              </div>
+                              <h3>Hotels in  Islamabad</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 3 <i class="fa fa-star"></i>  from $632</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/hongkong.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Hong Kong</span>
+                              </div>
+                              <h3>Hotels in  Hong Kong</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 4 <i class="fa fa-star"></i>  from $565</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/New South Wales.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>   New South Wales </span>
+                              </div>
+                              <h3>Hotels in  Islamabad</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 3 <i class="fa fa-star"></i>  from $657</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="ourbestairlines">
+         <div class="container">
+            <div class="col-md-12 col-sm-12 col-xs-12 flight-offer-dtls">
+               <h2 class="text-center">Cheap hotels in popular countries</h2>
+               <p class="text-center">Find more hotels in great destinations</p>
+               <div class="col-md-4 col-sm-4 col-xs-12 trending-citiesdis" style="margin-top:20px;">
+                  <img src="img/northamr.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i> North America</span>
+                     </div>
+                     <h3><span>Hotels in </span> <br>USA</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 3 <i class="fa fa-star"></i> from $558</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12 trending-citiesdis" style="margin-top:20px;">
+                  <img src="img/india1.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Asia</span>
+                     </div>
+                     <h3><span>Hotels in </span> <br>India</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 3 <i class="fa fa-star"></i> from $346</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12 trending-citiesdis" style="margin-top:20px;">
+                  <img src="img/thailand1.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Asia</span>
+                     </div>
+                     <h3><span>Hotels in </span> <br>Thailand</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 3 <i class="fa fa-star"></i> from $379</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 hidden-sm hidden-xs" style="margin-top:20px;">
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/india.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  India</span>
+                     </div>
+                     <h3>Hotels in  Delhi</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 3 <i class="fa fa-star"></i> from $345</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/bangkok_1.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Bangkok</span>
+                     </div>
+                     <h3>Hotels in  Bangkok</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 3 <i class="fa fa-star"></i> from $678</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/Manila.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>   Manila</span>
+                     </div>
+                     <h3>Hotels in  Manila</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price">3 <i class="fa fa-star"></i>  from $898</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/Islamabad.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Islamabad</span>
+                     </div>
+                     <h3>Hotels in  Islamabad</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 3 <i class="fa fa-star"></i> from $564</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/hongkong.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Hong Kong</span>
+                     </div>
+                     <h3>Hotels in  Hong Kong</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> 3 <i class="fa fa-star"></i> from $787</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/New South Wales.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>   New South Wales </span>
+                     </div>
+                     <h3>Hotels in  Islamabad</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price">3 <i class="fa fa-star"></i>  from $546</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-12 hidden-md visible-sm visible-xs" style="margin-top:30px;">
+                  <div class="owl-carousel owl-theme" id="owl-carousel3">
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/india.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  India</span>
+                              </div>
+                              <h3>Hotels in  Delhi</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 3 <i class="fa fa-star"></i> from $898</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/bangkok_1.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Bangkok</span>
+                              </div>
+                              <h3>Hotels in  Bangkok</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 3 <i class="fa fa-star"></i> from $432</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/Manila.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>   Manila</span>
+                              </div>
+                              <h3>Hotels in  Manila</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 3 <i class="fa fa-star"></i> from $345</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/Islamabad.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Islamabad</span>
+                              </div>
+                              <h3>Hotels in  Islamabad</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 3 <i class="fa fa-star"></i> from $632</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/hongkong.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Hong Kong</span>
+                              </div>
+                              <h3>Hotels in  Hong Kong</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price">3 <i class="fa fa-star"></i>  from $565</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/New South Wales.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>   New South Wales </span>
+                              </div>
+                              <h3>Hotels in Islamabad</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> 3 <i class="fa fa-star"></i> from $657</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+			
+         </div>
+      </section>
+	   <section class="trending-flights">
+	     <div class="container">
+		   <h2 class="text-center">Looking for somewhere else?</h2>
+               <p class="text-center">Choose from our wide range of destinations</p>
+			   <div class="col-md-12 col-sm-12 col-xs-12 flight-offer-dtls" style="margin-top:30px;">
+          <div class="col-md-4">
+			<img src="img/holidayextras.jpg" class="img-responsive">
+		  </div>
+          <div class="col-md-4">
+			<img src="img/attraction-world.jpg" class="img-responsive">
+		  </div>
+          <div class="col-md-4">
+			<img src="img/insurance.jpg" class="img-responsive">
+		  </div>
+		   </div>
+		   </div>
+      </section>
+	  <section class="footer">
+		 <div class="container">
+			<p>The flight-inclusive holidays on this website which depart from the UK are financially protected by the ATOL scheme. 
+			This website is intended primarily to residents of the UK and all bookings are subject to our terms and conditions found here. 
+			But ATOL protection does not apply to all holiday and travel services listed (e.g car hire or accommodation only bookings).
+			Please ask us to confirm what protection may apply to your booking. If you do not receive an ATOL certificate then the booking will not be ATOL protected. 
+			If you do receive an ATOL Certificate but all the parts of your trip are not listed on it, those parts will not be protected. 
+			Please see our booking conditions for information or for more information about financial protection and the ATOL certificate 
+			go to: www.caa.co.uk/ATOLCertificate. 
+			Please note: A fee applies to telephonic bookings.
+			</p>
+			
+			<div class="col-md-12">
+			<div class="col-md-6 col-sm-6 col-xs-6">
+			 <span class="copyright">© Copyright 2020 All rights reserved</span>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 social-icons text-right">
+			  <span class="followus"> Follow Us </span>
+					<a href=""><i class="fa fa-facebook-square"></i></a>
+					<a href=""><i class="fa fa-twitter-square"></i></a>
+					<a href=""><i class="fa fa-youtube-square"></i></a>
+					<a href=""><i class="fa fa-linkedin"></i></a>
+				</div>
+				
+			</div>
+		 </div>
+	  </section>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+   </body>
+</html>

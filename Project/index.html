@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Llycafly</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href ="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+   </head>
+   <body>
+      <section class="banner-sec">
+         <div class="banner-overlay">
+            <div class="top-container hidden-xs">
+               <img src="img/lycafly_logo.png">
+            </div>
+            <div class="menu-items header" id="myHeader">
+               <div class="container">
+                  <div class="navbar-header">
+                     <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                     <span class="hidden-md hidden-lg mobile-logo"><img src="img/lycafly_logo.png"></span>
+                  </div>
+                  <div class="navbar-inverse side-collapse in navbar-desktop">
+                     <nav role="navigation" class="navbar-collapse">
+                        <div class="col-md-3 logo hidden-sm hidden-xs"><img src="img/lycafly_logo.png"></div>
+                        <div class="col-md-9 menu-bar">
+                           <ul class="nav navbar-nav">
+                              <li class="active"><a href="index.html"><i class="material-icons">flight</i> Flights</a></li>
+                              <li><a href="holidays.html"><i class="material-icons">flight</i><i class="material-icons">hotel</i>Flight + Hotel</a></li>
+                              <li><a href="hotels.html"><i class="material-icons">hotel</i>Hotels</a></li>
+                              <li><a href="car-hire.html"><i class="material-icons">directions_car</i>Car Hire</a></li>
+                           </ul>
+                        </div>
+                        <div class="col-md-12 support-dtls">
+                           <p class="pull-right"> <span><i class="material-icons">phone</i>902323244344</span> <span><i class="material-icons">work</i>My trip</span></p>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-12 text-center" id="myRadioGroup">
+               <input id="id_radio1" type="radio" name="name_radio" value="value_radio1" checked="checked"/><label for="id_radio1">Return</label>
+               <input id="id_radio2" type="radio" name="name_radio" value="value_radio2" /><label for="id_radio2">One-Way</label>
+               <input id="id_radio3" type="radio" name="name_radio" value="value_radio3" /><label for="id_radio3">Multi-City</label>
+               <div class="booking-radio">
+                  <div class="container">
+                     <div id="div1">
+                        <div class="col-md-10 return-cty">
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Departure</label></span>
+                              <input type="text" class="form-control" id="departure" placeholder="">
+                              <i class="material-icons">flight_takeoff</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Destination</label></span>
+                              <input type="text" class="form-control" id="destination" placeholder="">
+                              <i class="material-icons">flight_land</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input id="txtDepDate" value="" size="30" class="calender-input" readonly="readonly"/>
+                              <input id="txtDestDate" class="calender-destinput" value="" readonly="readonly" />
+                              <i class="material-icons">date_range</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input type="dropdown" class="form-control" id="destination" placeholder="Passenger">
+                              <i class="material-icons">people</i>
+                           </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                           <a href="search.html"><button class="btn btn-success btn-livesearch">Find Flights</button></a>
+                        </div>
+                     </div>
+                     <div id="div2" style="display:none;">
+                        <div class="col-md-10 oneway">
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Departure</label></span>
+                              <input type="text" class="form-control" id="departure" placeholder="">
+                              <i class="material-icons">flight_takeoff</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Destination</label></span>
+                              <input type="text" class="form-control" id="destination" placeholder="">
+                              <i class="material-icons">flight_land</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input id="onewaytxtDepDate" value="" size="30" class="calender-input" readonly="readonly"/>
+                              <input id="onewaytxtDestDate" class="calender-destinput" value="" readonly="readonly" />
+                              <i class="material-icons">date_range</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input type="text" class="form-control" id="destination" placeholder="Passenger">
+                              <i class="material-icons">people</i>
+                           </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                           <a href="search.html"><button class="btn btn-success btn-livesearch">Find Flights</button></a>
+                        </div>
+                     </div>
+                     <div id="div3"  style="display:none;">
+                        <div class="col-md-12 multi-cty">
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Departure</label></span>
+                              <input type="text" class="form-control" id="departure" placeholder="">
+                              <i class="material-icons">flight_takeoff</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Destination</label></span>
+                              <input type="text" class="form-control" id="destination" placeholder="">
+                              <i class="material-icons">flight_land</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input id="multiwaytxtDepDate" class="" value="" readonly="readonly" />
+                              <i class="material-icons">date_range</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input type="text" class="form-control" id="destination" placeholder="Passenger">
+                              <i class="material-icons">people</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Returning from</label></span>
+                              <input type="text" class="form-control" id="departure" placeholder="">
+                              <i class="material-icons">flight_takeoff</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Returning to</label></span>
+                              <input type="text" class="form-control" id="destination" placeholder="">
+                              <i class="material-icons">flight_land</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input id="multiwaytxtDestDate" value="" readonly="readonly"/>
+                              <i class="material-icons">date_range</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                             <a href="search.html"><button class="btn btn-success btn-livesearch">Find Flights</button></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="flight-offer">
+         <div class="container">
+            <h2 class="text-center">Compare the latest flight deals</h2>
+            <p class="text-center">Crackin good deals to make your Grinfreeze</p>
+            <div class="col-md-12 col-sm-12 col-xs-12 flight-offer-dtls" style="margin-top: 30px;">
+               <div class="col-md-4 col-sm-4 col-xs-12">
+                  <img src="img/offer1.jpg" class="img-responsive">
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12">
+                  <img src="img/offer2.jpg" class="img-responsive">
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12">
+                  <img src="img/offer3.jpg" class="img-responsive">
+               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 hidden-sm hidden-xs" style="margin-top: 20px;">
+               <div class="col-md-2 col-sm-2 col-xs-12">
+                  <img src="img/offer4.jpg" class="img-responsive" style="height: 250px;">
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12">
+                  <img src="img/offer5.jpg" class="img-responsive" style="height: 250px;">
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="offer-content">
+                     <img src="img/india.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  India</span>
+                     </div>
+                     <h3>London to Delhi</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $788</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="offer-content">
+                     <img src="img/bangkok_1.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Bangkok</span>
+                     </div>
+                     <h3>London to Bangkok</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $458</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="offer-content">
+                     <img src="img/Manila.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>   Manila</span>
+                     </div>
+                     <h3>London to Manila</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $378</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="offer-content">
+                     <img src="img/Islamabad.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Islamabad</span>
+                     </div>
+                     <h3>London to Islamabad</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $670</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+               <div class="col-xs-12 hidden-md visible-sm visible-xs" style="margin-top:30px;">
+                  <div class="owl-carousel owl-theme" id="owl-carousel">
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="offer-content">
+                              <img src="img/india.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  India</span>
+                              </div>
+                              <h3>London to Delhi</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $778</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="offer-content">
+                              <img src="img/bangkok_1.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Bangkok</span>
+                              </div>
+                              <h3>London to Bangkok</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $458</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="offer-content">
+                              <img src="img/Manila.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>   Manila</span>
+                              </div>
+                              <h3>London to Manila</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $378</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="offer-content">
+                              <img src="img/Islamabad.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Islamabad</span>
+                              </div>
+                              <h3>London to Islamabad</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $778</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="popular-cities">
+         <div class="container">
+            <div class="col-md-12 col-sm-12 col-xs-12 flight-offer-dtls">
+               <h2 class="text-center">Popular cities</h2>
+               <p class="text-center">Compare flights to these top spots</p>
+               <div class="col-md-4 col-sm-4 col-xs-12 popular-citiesdis" style="margin-top:20px;">
+                  <img src="img/dubai.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Dubai</span>
+                     </div>
+                     <h3><span>Cheap flights to</span> <br>Dubai</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $558</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12 popular-citiesdis" style="margin-top:20px;">
+                  <img src="img/maldives.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Maldives</span>
+                     </div>
+                     <h3><span>Cheap flights to</span> <br>Maldives</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $456</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12 popular-citiesdis" style="margin-top:20px;">
+                  <img src="img/srilanka.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Sri lanka</span>
+                     </div>
+                     <h3><span>Cheap flights to</span> <br>Sri lanka</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $569</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 hidden-sm hidden-xs" style="margin-top:20px;">
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/india.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  India</span>
+                     </div>
+                     <h3>Cheap flights to Delhi</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $345</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/bangkok_1.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Bangkok</span>
+                     </div>
+                     <h3>Cheap flights to Bangkok</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $678</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/Manila.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>   Manila</span>
+                     </div>
+                     <h3>Cheap flights to Manila</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $898</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/Islamabad.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Islamabad</span>
+                     </div>
+                     <h3>Cheap flights to Islamabad</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $564</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/hongkong.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Hong Kong</span>
+                     </div>
+                     <h3>Cheap flights to Hong Kong</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $787</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/New South Wales.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>   New South Wales </span>
+                     </div>
+                     <h3>Cheap flights to Islamabad</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $546</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-12 hidden-md visible-sm visible-xs" style="margin-top:30px;">
+                  <div class="owl-carousel owl-theme" id="owl-carousel1">
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/india.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  India</span>
+                              </div>
+                              <h3>Cheap flights to Delhi</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $898</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/bangkok_1.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Bangkok</span>
+                              </div>
+                              <h3>Cheap flights to Bangkok</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $432</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/Manila.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>   Manila</span>
+                              </div>
+                              <h3>Cheap flights to Manila</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $345</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/Islamabad.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Islamabad</span>
+                              </div>
+                              <h3>Cheap flights to Islamabad</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $632</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/hongkong.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Hong Kong</span>
+                              </div>
+                              <h3>Cheap flights to Hong Kong</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $565</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/New South Wales.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>   New South Wales </span>
+                              </div>
+                              <h3>Cheap flights to Islamabad</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $657</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="ourbestairlines">
+         <div class="container">
+         <div class="col-md-12 col-sm-12 col-xs-12 flight-offer-dtls">
+            <h2 class="text-center">Our bestselling airlines</h2>
+            <p class="text-center">Bag a bargain with these popular airlines</p>
+            <div class="col-md-4 col-sm-4 col-xs-12 airlines" style="margin-top:20px;">
+               <img src="img/thaiairways.jpg" class="img-responsive">
+               <div class="city-overlay1">
+                  <div class="airlines-cnt">
+                     <h3>Thai Airways</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price">  price from $756</span> <br>
+                        <span style="font-size: 13px;">London Gatwick to New York</span> 
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 airlines" style="margin-top:20px;">
+               <img src="img/qatarairways.jpg" class="img-responsive">
+               <div class="city-overlay1">
+                  <div class="airlines-cnt">
+                     <h3>Qatar Airways</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price">  price from $655</span> <br>
+                        <span style="font-size: 13px;">London Heathrow to Chennai</span> 
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 airlines" style="margin-top:20px;">
+               <img src="img/singaporeairlines.jpg" class="img-responsive">
+               <div class="city-overlay1">
+                  <div class="airlines-cnt">
+                     <h3>Singapore Airlines</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price">  price from $670</span> <br>
+                        <span style="font-size: 13px;">London to New Delhi</span> 
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-12 col-sm-12 col-xs-12 flight-offer-dtls  hidden-sm hidden-xs">
+            <div class="col-md-2 col-sm-2 col-xs-12" style="margin-top:20px;">
+               <img src="img/IB.svg" class="img-responsive">
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12" style="margin-top:20px;">
+               <img src="img/AY.svg" class="img-responsive">
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12" style="margin-top:20px;">
+               <img src="img/TG.svg" class="img-responsive">
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12" style="margin-top:20px;">
+               <img src="img/AC.svg" class="img-responsive">
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12" style="margin-top:20px;">
+               <img src="img/EY.svg" class="img-responsive">
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12" style="margin-top:20px;">
+               <img src="img/QR.svg" class="img-responsive">
+            </div>
+         </div>
+         <div class="clearfix"></div>
+         <div class="col-xs-12 hidden-md visible-sm visible-xs"  style="margin-top:20px;">
+            <div class="owl-carousel owl-theme" id="owl-carousel2">
+               <div class="item">
+                  <img src="img/IB.svg" class="img-responsive">
+               </div>
+               <div class="item">
+                  <img src="img/AY.svg" class="img-responsive">
+               </div>
+               <div class="item">
+                  <img src="img/TG.svg" class="img-responsive">
+               </div>
+               <div class="item">
+                  <img src="img/AC.svg" class="img-responsive">
+               </div>
+               <div class="item">
+                  <img src="img/EY.svg" class="img-responsive">
+               </div>
+               <div class="item">
+                  <img src="img/QR.svg" class="img-responsive">
+               </div>
+            </div>
+         </div>
+		  <div class="col-md-12 col-sm-12 col-xs-12 airline-list">
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				 <li>American Airlines</li>
+				  <li>Garuda Indonesia</li>
+				 <li>Austrian Airlines</li>
+				<li>United Airlines</li>
+			   </ul>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				 <li>Ethiopian Airlines</li>
+				  <li>KLM</li>
+				 <li>EVA Air</li>
+				<li>Lufthansa</li>
+			   </ul>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				 <li>TAP Air Portugal</li>
+				  <li>LATAM</li>
+				 <li>Qantas</li>
+				<li>Cathay Pacific</li>
+			   </ul>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				<li>Air China</li>
+				  <li>Royal Jordanian Airlines</li>
+				 <li>Brussels Airlines</li>
+				<li>Norwegian Air UK</li>
+			   </ul>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				<li>Delta Air Lines</li>
+				<li>Malaysia Airlines</li>
+				 <li>FlyBe</li>
+				<li>Turkish Airlines</li>
+			   </ul>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				<li>Egyptair</li>
+				<li>West Jet</li>
+				 <li>Oman Air</li>
+			   </ul>
+			</div>
+		   </div>
+	 </div> 
+      </section>
+	   <section class="trending-flights">
+         <div class="container">
+            <div class="col-md-12 col-sm-12 col-xs-12 flight-offer-dtls">
+               <h2 class="text-center">Trending countries</h2>
+               <p class="text-center">Find cheap flights for your next trip</p>
+               <div class="col-md-4 col-sm-4 col-xs-12 trending-citiesdis" style="margin-top:20px;">
+                  <img src="img/northamr.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i> North America</span>
+                     </div>
+                     <h3><span>Cheap flights to</span> <br>USA</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $558</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12 trending-citiesdis" style="margin-top:20px;">
+                  <img src="img/india1.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Asia</span>
+                     </div>
+                     <h3><span>Cheap flights to</span> <br>India</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $346</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-4 col-xs-12 trending-citiesdis" style="margin-top:20px;">
+                  <img src="img/thailand1.jpg" class="img-responsive">
+                  <div class="city-overlay">
+                     <div class="popularcity-loc">
+                        <span><i class="fa fa-map-marker"></i>  Asia</span>
+                     </div>
+                     <h3><span>Cheap flights to</span> <br>Thailand</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $379</span> <br>
+                        <span>per person</span> 
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 hidden-sm hidden-xs" style="margin-top:20px;">
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/india.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  India</span>
+                     </div>
+                     <h3>Cheap flights to Delhi</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $345</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/bangkok_1.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Bangkok</span>
+                     </div>
+                     <h3>Cheap flights to Bangkok</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $678</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/Manila.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>   Manila</span>
+                     </div>
+                     <h3>Cheap flights to Manila</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $898</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/Islamabad.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Islamabad</span>
+                     </div>
+                     <h3>Cheap flights to Islamabad</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $564</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/hongkong.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>  Hong Kong</span>
+                     </div>
+                     <h3>Cheap flights to Hong Kong</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $787</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-12 offer-city">
+                  <div class="popularcity-content">
+                     <img src="img/New South Wales.jpg" class="img-responsive">
+                     <div class="offer-overlay"></div>
+                     <div class="country-name">
+                        <span><i class="fa fa-map-marker"></i>   New South Wales </span>
+                     </div>
+                     <h3>Cheap flights to Islamabad</h3>
+                     <p class="offer-card-desc"> 
+                        <span class="price"> from $546</span> <br>
+                        <span>per person</span> 
+                     </p>
+                     <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-12 hidden-md visible-sm visible-xs" style="margin-top:30px;">
+                  <div class="owl-carousel owl-theme" id="owl-carousel3">
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/india.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  India</span>
+                              </div>
+                              <h3>Cheap flights to Delhi</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $898</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/bangkok_1.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Bangkok</span>
+                              </div>
+                              <h3>Cheap flights to Bangkok</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $432</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/Manila.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>   Manila</span>
+                              </div>
+                              <h3>Cheap flights to Manila</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $345</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/Islamabad.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Islamabad</span>
+                              </div>
+                              <h3>Cheap flights to Islamabad</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $632</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/hongkong.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>  Hong Kong</span>
+                              </div>
+                              <h3>Cheap flights to Hong Kong</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $565</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item">
+                        <div class="col-xs-12 offer-city">
+                           <div class="popularcity-content">
+                              <img src="img/New South Wales.jpg" class="img-responsive">
+                              <div class="offer-overlay"></div>
+                              <div class="country-name">
+                                 <span><i class="fa fa-map-marker"></i>   New South Wales </span>
+                              </div>
+                              <h3>Cheap flights to Islamabad</h3>
+                              <p class="offer-card-desc"> 
+                                 <span class="price"> from $657</span> <br>
+                                 <span>per person</span> 
+                              </p>
+                              <p class="text-center findflights"><a href="" class="btn btn-primary">Find Flights</a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+			<div class="col-md-12 col-sm-12 col-xs-12 trending-placelist">
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				 <li>Flights to Malaysia</li>
+				  <li>Flights to South Africa</li>
+				 <li>Flights to China</li>
+			   </ul>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				 <li>Flights to Switzerland</li>
+				  <li>Flights to India</li>
+				 <li>Flights to Egypt</li>
+			   </ul>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				 <li>Flights to New Zealand</li>
+				  <li>Flights to Vietnam</li>
+				 <li>Flights to Saudi Arabia</li>
+			   </ul>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				 <li>Flights to Hong Kong</li>
+				  <li>Flights to Singapore</li>
+				 <li>Flights to Sri Lanka</li>
+			   </ul>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				 <li>Flights to Greece</li>
+				  <li>Flights to Japan</li>
+				 <li>Flights to Bangladesh</li>
+			   </ul>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6" style="margin-top:20px;">
+			   <ul class="list-unstyled">
+				 <li>Flights to USA</li>
+				  <li>Flights to London</li>
+				 <li>Flights to Europe</li>
+			   </ul>
+			</div>
+			</div>
+         </div>
+      </section>
+	  <section class="footer">
+		 <div class="container">
+			<p>The flight-inclusive holidays on this website which depart from the UK are financially protected by the ATOL scheme. 
+			This website is intended primarily to residents of the UK and all bookings are subject to our terms and conditions found here. 
+			But ATOL protection does not apply to all holiday and travel services listed (e.g car hire or accommodation only bookings).
+			Please ask us to confirm what protection may apply to your booking. If you do not receive an ATOL certificate then the booking will not be ATOL protected. 
+			If you do receive an ATOL Certificate but all the parts of your trip are not listed on it, those parts will not be protected. 
+			Please see our booking conditions for information or for more information about financial protection and the ATOL certificate 
+			go to: www.caa.co.uk/ATOLCertificate. 
+			Please note: A fee applies to telephonic bookings.
+			</p>
+			
+			<div class="col-md-12">
+			<div class="col-md-6 col-sm-6 col-xs-6">
+			 <span class="copyright">© Copyright 2020 All rights reserved</span>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 social-icons text-right">
+			  <span class="followus"> Follow Us </span>
+					<a href=""><i class="fa fa-facebook-square"></i></a>
+					<a href=""><i class="fa fa-twitter-square"></i></a>
+					<a href=""><i class="fa fa-youtube-square"></i></a>
+					<a href=""><i class="fa fa-linkedin"></i></a>
+				</div>
+				
+			</div>
+		 </div>
+	  </section>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	  <script type="text/javascript">
+			function selectAll(){
+				var items=document.getElementsByName('acs');
+				for(var i=0; i<items.length; i++){
+					if(items[i].type=='checkbox')
+						items[i].checked=true;
+				}
+			}
+			
+			function UnSelectAll(){
+				var items=document.getElementsByName('acs');
+				for(var i=0; i<items.length; i++){
+					if(items[i].type=='checkbox')
+						items[i].checked=false;
+				}
+			}			
+		</script>
+   </body>
+</html>

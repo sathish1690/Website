@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Llycafly</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href ="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+   </head>
+   <body>
+      <section class="search-result-page">
+         <div class="menu-items header search-navbar" id="myHeader">
+            <div class="container">
+               <div class="navbar-header">
+                  <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                  <span class="hidden-md hidden-lg mobile-logo"><img src="img/lycafly_logo.png"></span>
+               </div>
+               <div class="navbar-inverse side-collapse in navbar-desktop">
+                  <nav role="navigation" class="navbar-collapse">
+                     <div class="col-md-2 logo hidden-sm hidden-xs"><img src="img/lycafly_logo.png"></div>
+                     <div class="col-md-5 menu-bar">
+                        <ul class="nav navbar-nav search-navbar-nav">
+                           <li class="active"><a href="index.html"><i class="material-icons">flight</i> Flights</a></li>
+                           <li><a href="holidays.html"><i class="material-icons">flight</i><i class="material-icons">hotel</i>Flight + Hotel</a></li>
+                           <li><a href="hotels.html"><i class="material-icons">hotel</i>Hotels</a></li>
+                           <li><a href="car-hire.html"><i class="material-icons">directions_car</i>Car Hire</a></li>
+                        </ul>
+                     </div>
+                     <div class="col-md-5 support-dtls">
+                        <p class="pull-right"> <span><i class="material-icons">phone</i>902323244344</span> <span><i class="material-icons">work</i>My trip</span></p>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="search-wrapper">
+         <section class="flight-resultsection">
+            <div class="container">
+               <!-- <div id="sub3" style="display:none;">-->
+               <div class="modal fade" id="lab-slide-bottom-popup" data-keyboard="false" data-backdrop="false">
+                  <div class="modal-header">
+                     <span class="modal-title" id="exampleModalLongTitle">Filter your results  </span>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                     </button>
+                  </div>
+                  <div class="lab-modal-body">
+                     <div id="faq" role="tablist" aria-multiselectable="true">
+                        <div class="card">
+                           <div class="card-header" role="tab" id="questionOne">
+                              <h5 class="card-title">
+                                 <p><a role="button" data-toggle="collapse" data-parent="#faq" href="#answerOne" aria-expanded="true" aria-controls="answerOne">
+                                    <i class="fa fa-caret-down"></i> 
+                                    <span class="pull-left">Number of Stops</span>
+                                    </a>
+                                    <span class="pull-right"><a href="javascript:void(0)" onclick="uncheckAll()">Clear</a></span>
+                                 </p>
+                              </h5>
+                           </div>
+                           <div id="answerOne" class="collapse" role="tabcard" aria-labelledby="questionOne">
+                              <div class="card-block">
+                                 <label class="check-container">Direct
+                                 <input type="checkbox" name="search-select" class="search-checkbox check1">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">One Stop
+                                 <input type="checkbox" name="search-select" class="search-checkbox check1">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Two Stop
+                                 <input type="checkbox" name="search-select" class="search-checkbox check1">
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card">
+                           <div class="card-header" role="tab" id="questionTwo">
+                              <h5 class="card-title">
+                                 <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerTwo" aria-expanded="true" aria-controls="answerTwo">
+                                    <i class="fa fa-caret-down"></i> 
+                                    <span class="pull-left">Airlines</span>
+                                    </a>
+                                    <span class="pull-right"><a href="javascript:void(0)" onclick="uncheckAll1()">Clear</a></span>
+                                 </p>
+                              </h5>
+                           </div>
+                           <div id="answerTwo" class="collapse" role="tabcard" aria-labelledby="questionTwo">
+                              <div class="card-block">
+                                 <label class="check-container">Emirates(9)
+                                 <input type="checkbox" name="search-select" class="search-checkbox check2">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Etihad Airways(5)
+                                 <input type="checkbox" name="search-select" class="search-checkbox check2">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Qatar Airways(10)
+                                 <input type="checkbox" name="search-select" class="search-checkbox check2">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Airdia(4)
+                                 <input type="checkbox" name="search-select" class="search-checkbox check2">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Multi Carrier(6)
+                                 <input type="checkbox" name="search-select" class="search-checkbox check2">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Lufthansa(2)
+                                 <input type="checkbox" name="search-select" class="search-checkbox check2">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Oman Air(12)
+                                 <input type="checkbox" name="search-select" class="search-checkbox check2">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">LTurkish Airlines(7)
+                                 <input type="checkbox" name="search-select" class="search-checkbox check2">
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card">
+                           <div class="card-header" role="tab" id="questionThree">
+                              <h5 class="card-title">
+                                 <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerThree" aria-expanded="true" aria-controls="answerThree">
+                                    <i class="fa fa-caret-down"></i> 
+                                    <span class="pull-left">Outbound Departure Time range</span>
+                                    </a>
+                                    <span class="pull-right"><a href="javascript:void(0)" onclick="uncheckAll2()">Clear</a></span>
+                                 </p>
+                              </h5>
+                           </div>
+                           <div id="answerThree" class="collapse" role="tabcard" aria-labelledby="questionThree">
+                              <div class="card-block">
+                                 <label class="check-container">Early
+                                 <input type="checkbox" name="search-select" class="search-checkbox check3">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Morning
+                                 <input type="checkbox" name="search-select" class="search-checkbox check3">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Afternoon
+                                 <input type="checkbox" name="search-select" class="search-checkbox check3">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Evening
+                                 <input type="checkbox" name="search-select" class="search-checkbox check3">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Night
+                                 <input type="checkbox" name="search-select" class="search-checkbox check3">
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card">
+                           <div class="card-header" role="tab" id="questionFour">
+                              <h5 class="card-title">
+                                 <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerFour" aria-expanded="true" aria-controls="answerFour">
+                                    <i class="fa fa-caret-down"></i> 
+                                    <span class="pull-left">Trip Duration</span>
+                                    </a>
+                                    <span class="pull-right clear-sec"><a href="javascript:void(0)" onclick="uncheckAll3()">Clear</a></span>
+                                 </p>
+                              </h5>
+                           </div>
+                           <div id="answerFour" class="collapse" role="tabcard" aria-labelledby="questionFour">
+                              <div class="card-block">
+                                 <label class="check-container">Really fast
+                                 <input type="checkbox" name="search-select" class="search-checkbox check4">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Fast
+                                 <input type="checkbox" name="search-select" class="search-checkbox check4">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Average
+                                 <input type="checkbox" name="search-select" class="search-checkbox check4">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Slow
+                                 <input type="checkbox" name="search-select" class="search-checkbox check4">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Really Slow
+                                 <input type="checkbox" name="search-select" class="search-checkbox check4">
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card">
+                           <div class="card-header" role="tab" id="questionFive">
+                              <h5 class="card-title">
+                                 <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerFive" aria-expanded="true" aria-controls="answerFive">
+                                    <i class="fa fa-caret-down"></i> 
+                                    <span class="pull-left">Outbound Duration</span>
+                                    </a>
+                                    <span class="pull-right clear-sec"><a href="javascript:void(0)">Clear</a></span>
+                                 </p>
+                              </h5>
+                           </div>
+                           <div id="answerFive" class="collapse" role="tabcard" aria-labelledby="questionFive">
+                              <div class="card-block" style="margin-bottom:20px;">
+                                 <p class="text-center">
+                                    <label id="something" readonly style="border:0; color:#0e508e; font-weight:bold; text-align:center;">00hrs:00mins</label>
+                                 </p>
+                                 <div id="slider-range"></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card">
+                           <div class="card-header" role="tab" id="questionSix">
+                              <h5 class="card-title">
+                                 <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerSix" aria-expanded="true" aria-controls="answerSix">
+                                    <i class="fa fa-caret-down"></i> 
+                                    <span class="pull-left">Price Per Person</span>
+                                    </a>
+                                    <span class="pull-right clear-sec"><a href="javascript:void(0)">Clear</a></span>
+                                 </p>
+                              </h5>
+                           </div>
+                           <div id="answerSix" class="collapse" role="tabcard" aria-labelledby="questionSix">
+                              <div class="card-block" style="margin-bottom:20px;">
+                                 <p class="text-center">
+                                    <input type="text" id="amount" readonly style="border:0; color:#0e508e; font-weight:bold; text-align:center;">
+                                 </p>
+                                 <div id="slider-range1"></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card">
+                           <div class="card-header" role="tab" id="questionSeven">
+                              <h5 class="card-title">
+                                 <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerSeven" aria-expanded="true" aria-controls="answerSeven">
+                                    <i class="fa fa-caret-down"></i> 
+                                    <span class="pull-left">Routehappy Score</span>
+                                    </a>
+                                    <span class="pull-right clear-sec"><a href="javascript:void(0)" onclick="uncheckAll4()">Clear</a></span>
+                                 </p>
+                              </h5>
+                           </div>
+                           <div id="answerSeven" class="collapse" role="tabcard" aria-labelledby="questionSeven">
+                              <div class="card-block">
+                                 <label class="check-container">Excellent
+                                 <input type="checkbox" name="search-select" class="search-checkbox check5">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Very Good
+                                 <input type="checkbox" name="search-select" class="search-checkbox check5">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Good
+                                 <input type="checkbox" name="search-select" class="search-checkbox check5">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Okay
+                                 <input type="checkbox" name="search-select" class="search-checkbox check5">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Fair
+                                 <input type="checkbox" name="search-select" class="search-checkbox check5">
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="check-container">Poor
+                                 <input type="checkbox" name="search-select" class="search-checkbox check5">
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- /.modal-body -->
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-secondary" onclick='selectAll()' />Select All</button>
+                     <button type="button" class="btn btn-secondary"  onclick='UnSelectAll()'/> Clear All </button>
+                  </div>
+               </div>
+               <div class="hidden-md visible-xs visible-sm filter-button text-center">
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#lab-slide-bottom-popup">
+                  <span>Filters</span><i class="material-icons">tune</i> </button>
+                  <!--<button id="show" ></button>-->
+               </div>
+               <div class="col-md-3 sidebar-filter hidden-xs hidden-sm">
+                  <p class="filter-heading">Filter your results 
+                     <span class="pull-right search-clear">
+                     <a href="javascript:void(0)" onclick='selectAll()' />Select All</a>
+                     <a href="javascript:void(0)" onclick='UnSelectAll()'/> Clear All </a>
+                     <span>
+                  </p>
+                  <div id="faq" role="tablist" aria-multiselectable="true">
+                     <div class="card">
+                        <div class="card-header" role="tab" id="questionOne1">
+                           <h5 class="card-title">
+                              <p><a role="button" data-toggle="collapse" data-parent="#faq" href="#answerOne1" aria-expanded="true" aria-controls="answerOne1">
+                                 <i class="fa fa-caret-down"></i> 
+                                 <span class="pull-left">Number of Stops</span>
+                                 </a>
+                                 <span class="pull-right"><a href="javascript:void(0)" onclick="uncheckAll()">Clear</a></span>
+                              </p>
+                           </h5>
+                        </div>
+                        <div id="answerOne1" class="collapse in" role="tabcard" aria-labelledby="questionOne1">
+                           <div class="card-block">
+                              <label class="check-container">Direct
+                              <input type="checkbox" name="search-select" class="search-checkbox check1">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">One Stop
+                              <input type="checkbox" name="search-select" class="search-checkbox check1">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Two Stop
+                              <input type="checkbox" name="search-select" class="search-checkbox check1">
+                              <span class="checkmark"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" role="tab" id="questionTwo1">
+                           <h5 class="card-title">
+                              <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerTwo1" aria-expanded="true" aria-controls="answerTwo1">
+                                 <i class="fa fa-caret-down"></i> 
+                                 <span class="pull-left">Airlines</span>
+                                 </a>
+                                 <span class="pull-right"><a href="javascript:void(0)" onclick="uncheckAll1()">Clear</a></span>
+                              </p>
+                           </h5>
+                        </div>
+                        <div id="answerTwo1" class="collapse in" role="tabcard" aria-labelledby="questionTwo1">
+                           <div class="card-block">
+                              <label class="check-container">Emirates(9)
+                              <input type="checkbox" name="search-select" class="search-checkbox check2">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Etihad Airways(5)
+                              <input type="checkbox" name="search-select" class="search-checkbox check2">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Qatar Airways(10)
+                              <input type="checkbox" name="search-select" class="search-checkbox check2">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Air India(4)
+                              <input type="checkbox" name="search-select" class="search-checkbox check2">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Multi Carrier(6)
+                              <input type="checkbox" name="search-select" class="search-checkbox check2">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Lufthansa(2)
+                              <input type="checkbox" name="search-select" class="search-checkbox check2">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Oman Air(12)
+                              <input type="checkbox" name="search-select" class="search-checkbox check2">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">LTurkish Airlines(7)
+                              <input type="checkbox" name="search-select" class="search-checkbox check2">
+                              <span class="checkmark"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" role="tab" id="questionThree1">
+                           <h5 class="card-title">
+                              <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerThree1" aria-expanded="true" aria-controls="answerThree1">
+                                 <i class="fa fa-caret-down"></i> 
+                                 <span class="pull-left">Outbound Departure Time range</span>
+                                 </a>
+                                 <span class="pull-right"><a href="javascript:void(0)" onclick="uncheckAll2()">Clear</a></span>
+                              </p>
+                           </h5>
+                        </div>
+                        <div id="answerThree1" class="collapse in" role="tabcard" aria-labelledby="questionThree1">
+                           <div class="card-block">
+                              <label class="check-container">Early
+                              <input type="checkbox" name="search-select" class="search-checkbox check3">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Morning
+                              <input type="checkbox" name="search-select" class="search-checkbox check3">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Afternoon
+                              <input type="checkbox" name="search-select" class="search-checkbox check3">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Evening
+                              <input type="checkbox" name="search-select" class="search-checkbox check3">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Night
+                              <input type="checkbox" name="search-select" class="search-checkbox check3">
+                              <span class="checkmark"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" role="tab" id="questionFour1">
+                           <h5 class="card-title">
+                              <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerFour1" aria-expanded="true" aria-controls="answerFour1">
+                                 <i class="fa fa-caret-down"></i> 
+                                 <span class="pull-left">Trip Duration</span>
+                                 </a>
+                                 <span class="pull-right clear-sec"><a href="javascript:void(0)" onclick="uncheckAll3()">Clear</a></span>
+                              </p>
+                           </h5>
+                        </div>
+                        <div id="answerFour1" class="collapse in" role="tabcard" aria-labelledby="questionFour1">
+                           <div class="card-block">
+                              <label class="check-container">Really fast
+                              <input type="checkbox" name="search-select" class="search-checkbox check4">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Fast
+                              <input type="checkbox" name="search-select" class="search-checkbox check4">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Average
+                              <input type="checkbox" name="search-select" class="search-checkbox check4">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Slow
+                              <input type="checkbox" name="search-select" class="search-checkbox check4">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Really Slow
+                              <input type="checkbox" name="search-select" class="search-checkbox check4">
+                              <span class="checkmark"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" role="tab" id="questionFive1">
+                           <h5 class="card-title">
+                              <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerFive1" aria-expanded="true" aria-controls="answerFive1">
+                                 <i class="fa fa-caret-down"></i> 
+                                 <span class="pull-left">Outbound Duration</span>
+                                 </a>
+                                 <span class="pull-right clear-sec"><a href="javascript:void(0)">Clear</a></span>
+                              </p>
+                           </h5>
+                        </div>
+                        <div id="answerFive1" class="collapse in" role="tabcard" aria-labelledby="questionFive1">
+                           <div class="card-block" style="margin-bottom:20px;">
+                              <p class="text-center">
+                                 <label id="something1" readonly style="border:0; color:#0e508e; font-weight:bold; text-align:center;">00hrs:00mins</label>
+                              </p>
+                              <div id="slider-range2"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" role="tab" id="questionSix1">
+                           <h5 class="card-title">
+                              <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerSix1" aria-expanded="true" aria-controls="answerSix1">
+                                 <i class="fa fa-caret-down"></i> 
+                                 <span class="pull-left">Price Per Person</span>
+                                 </a>
+                                 <span class="pull-right clear-sec"><a href="javascript:void(0)">Clear</a></span>
+                              </p>
+                           </h5>
+                        </div>
+                        <div id="answerSix1" class="collapse in" role="tabcard" aria-labelledby="questionSix1">
+                           <div class="card-block" style="margin-bottom:20px;">
+                              <p class="text-center">
+                                 <input type="text" id="amount1" readonly style="border:0; color:#0e508e; font-weight:bold; text-align:center;">
+                              </p>
+                              <div id="slider-range3"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header" role="tab" id="questionSeven1">
+                           <h5 class="card-title">
+                              <p><a class="" data-toggle="collapse" data-parent="#faq" href="#answerSeven1" aria-expanded="true" aria-controls="answerSeven1">
+                                 <i class="fa fa-caret-down"></i> 
+                                 <span class="pull-left">Routehappy Score</span>
+                                 </a>
+                                 <span class="pull-right clear-sec"><a href="javascript:void(0)" onclick="uncheckAll4()">Clear</a></span>
+                              </p>
+                           </h5>
+                        </div>
+                        <div id="answerSeven1" class="collapse in" role="tabcard" aria-labelledby="questionSeven1">
+                           <div class="card-block">
+                              <label class="check-container">Excellent
+                              <input type="checkbox" name="search-select" class="search-checkbox check5">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Very Good
+                              <input type="checkbox" name="search-select" class="search-checkbox check5">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Good
+                              <input type="checkbox" name="search-select" class="search-checkbox check5">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Okay
+                              <input type="checkbox" name="search-select" class="search-checkbox check5">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Fair
+                              <input type="checkbox" name="search-select" class="search-checkbox check5">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="check-container">Poor
+                              <input type="checkbox" name="search-select" class="search-checkbox check5">
+                              <span class="checkmark"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-9 col-xs-12 col-sm-12 mobile-view">
+                  <div class="col-md-9  col-xs-12 col-sm-8 search-sort text-center">
+				  
+                     <div class="col-md-6 col-xs-6 col-sm-4 cheapest">
+                        <h3 class="">Cheapest</h3>
+                        <h2>$415</h2>
+                        <p>17h, 1 Stop</p>
+                     </div>
+                     <div class="col-md-6 col-xs-6 col-sm-4 fastest">
+                        <h3 class="">Fastest</h3>
+                        <h2>$455</h2>
+                        <p>17h, 1 Stop</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-xs-12 col-sm-4 alternate-date text-center">
+                     <h3>Alternative Dates</h3>
+                     <h2><i class="material-icons">date_range</i>$480</h2>
+                     <p>&nbsp </p>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 flight-result">
+                     <h4 class="cheapest-heading">Cheapest</h4>
+                     <div class="col-md-9 col-sm-8 col-xs-12 flight-dtls" style="padding: 0px;">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+                           <div class="col-md-2 col-sm-2 col-xs-3">
+                              <p class="text-left">Economy</p>
+                              <img src="img/VS.svg">
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                           <div class="col-md-4 col-sm-4 col-xs-3 text-center">
+                              <p>16h</p>
+                              <div class="takeoff-line">
+                                 <span>	<i class="material-icons">flight_takeoff</i><span>
+                              </div>
+                              <p>1 Stop</p>
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3 flight-dest">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr class="flight-segment">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+                           <div class="col-md-2 col-sm-2 col-xs-3">
+                              <p class="text-left">Economy</p>
+                              <img src="img/VS.svg">
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                           <div class="col-md-4 col-sm-4 col-xs-3 text-center">
+                              <p>16h</p>
+                              <div class="takeoff-line">
+                                 <span>	<i class="material-icons">flight_land</i><span>
+                              </div>
+                              <p>1 Stop</p>
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3 flight-dest">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr style="margin: 10px 16px;">
+                        <div class="flight-result-itinerary">
+                           <p class="itinerary-title">Full Itinerary
+                              <span class="itinerary-inclusions">Includes 
+                              <strong>30kg baggage per person > </strong>
+                              </span>
+                           </p>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col-sm-4 col-xs-12 flight-price">
+                        <div class="flightpice-cont">
+                           <h3 class="">$450<span>per person</span></h3>
+                           <h6 class="total-price">
+                           Total price : $900</h2>
+                           <a href="javascript:void(0)" class="btn btn-success">Select Flight</a>
+                           <p class="flight-fare-rules">
+                              <span>Price includes taxes and fuel supplements - </span>
+                              <span class="farerule-link" onClick="showHideDiv('divMsg')">Fare rules apply</span>
+							  <div id="divMsg" class="fare" style="display:none">
+							      <h2>Fare rules</h2>
+										<h3>Fare Overview</h3>
+										<dl>
+										   <dt>From:</dt>
+										   <dd>Heathrow</dd>
+										   <dt>To:</dt>
+										   <dd>Chennai Intl</dd>
+										   <dt>Airline:</dt>
+										   <dd>Oman Air</dd>
+										   <dt>Adult Fare:</dt>
+										   <dd>$125.00</dd>
+										   <dt>Adult Tax:</dt>
+										   <dd>$322.07</dd>
+										   <dt>Cabin:</dt>
+										   <dd>Economy</dd>
+										   <dt>Fare Type:</dt>
+										   <dd>Cat35</dd>
+										</dl>
+										<h3>Cancellation cost</h3>
+										<dl>
+										   <dt>Cancellation Charge:</dt>
+										   <dd>$100</dd>
+										</dl>
+										<h3>Potential Costs</h3>
+										<dl>
+										   <dt>Pre Travel Return Date Change:</dt>
+										   <dd>$100</dd>
+										   <dt>Post Travel Return Date Change:</dt>
+										   <dd>$100</dd>
+										</dl>
+								</div>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 ordinary-flight-result">
+                     <div class="col-md-9 col-sm-8 col-xs-12 flight-dtls" style="padding: 0px;">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+                           <div class="col-md-2 col-sm-2 col-xs-3">
+                              <p class="text-left">Economy</p>
+                              <img src="img/VS.svg">
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                           <div class="col-md-4 col-sm-4 col-xs-3 text-center">
+                              <p>16h</p>
+                              <div class="takeoff-line">
+                                 <span>	<i class="material-icons">flight_takeoff</i><span>
+                              </div>
+                              <p>1 Stop</p>
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3 flight-dest">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr class="flight-segment">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+                           <div class="col-md-2 col-sm-2 col-xs-3">
+                              <p class="text-left">Economy</p>
+                              <img src="img/VS.svg">
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                           <div class="col-md-4 col-sm-4 col-xs-3 text-center">
+                              <p>16h</p>
+                              <div class="takeoff-line">
+                                 <span>	<i class="material-icons">flight_land</i><span>
+                              </div>
+                              <p>1 Stop</p>
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3 flight-dest">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr style="margin: 10px 16px;">
+                        <div class="flight-result-itinerary">
+                           <p class="itinerary-title">Full Itinerary
+                              <span class="itinerary-inclusions">Includes 
+                              <strong>30kg baggage per person > </strong>
+                              </span>
+                           </p>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col-sm-4 col-xs-12 flight-price">
+                        <div class="flightpice-cont">
+                           <h3 class="">$450<span>per person</span></h3>
+                           <h6 class="total-price">
+                           Total price : $900</h2>
+                           <a href="javascript:void(0)" class="btn btn-success">Select Flight</a>
+                           <p class="flight-fare-rules">
+                              <span>Price includes taxes and fuel supplements - </span>
+                              <span class="farerule-link" onClick="showHideDiv('divMsg1')">Fare rules apply</span>
+							   <div id="divMsg1" class="fare" style="display:none">
+							      <h2>Fare rules</h2>
+										<h3>Fare Overview</h3>
+										<dl>
+										   <dt>From:</dt>
+										   <dd>Heathrow</dd>
+										   <dt>To:</dt>
+										   <dd>Chennai Intl</dd>
+										   <dt>Airline:</dt>
+										   <dd>Oman Air</dd>
+										   <dt>Adult Fare:</dt>
+										   <dd>$125.00</dd>
+										   <dt>Adult Tax:</dt>
+										   <dd>$322.07</dd>
+										   <dt>Cabin:</dt>
+										   <dd>Economy</dd>
+										   <dt>Fare Type:</dt>
+										   <dd>Cat35</dd>
+										</dl>
+										<h3>Cancellation cost</h3>
+										<dl>
+										   <dt>Cancellation Charge:</dt>
+										   <dd>$100</dd>
+										</dl>
+										<h3>Potential Costs</h3>
+										<dl>
+										   <dt>Pre Travel Return Date Change:</dt>
+										   <dd>$100</dd>
+										   <dt>Post Travel Return Date Change:</dt>
+										   <dd>$100</dd>
+										</dl>
+								</div>
+							  
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 ordinary-flight-result">
+                     <div class="col-md-9 col-sm-8 col-xs-12 flight-dtls" style="padding: 0px;">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+                           <div class="col-md-2 col-sm-2 col-xs-3">
+                              <p class="text-left">Economy</p>
+                              <img src="img/VS.svg">
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                           <div class="col-md-4 col-sm-4 col-xs-3 text-center">
+                              <p>16h</p>
+                              <div class="takeoff-line">
+                                 <span>	<i class="material-icons">flight_takeoff</i><span>
+                              </div>
+                              <p>1 Stop</p>
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3 flight-dest">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr class="flight-segment">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+                           <div class="col-md-2 col-sm-2 col-xs-3">
+                              <p class="text-left">Economy</p>
+                              <img src="img/VS.svg">
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                           <div class="col-md-4 col-sm-4 col-xs-3 text-center">
+                              <p>16h</p>
+                              <div class="takeoff-line">
+                                 <span>	<i class="material-icons">flight_land</i><span>
+                              </div>
+                              <p>1 Stop</p>
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3 flight-dest">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr style="margin: 10px 16px;">
+                        <div class="flight-result-itinerary">
+                           <p class="itinerary-title">Full Itinerary
+                              <span class="itinerary-inclusions">Includes 
+                              <strong>30kg baggage per person > </strong>
+                              </span>
+                           </p>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col-sm-4 col-xs-12 flight-price">
+                        <div class="flightpice-cont">
+                           <h3 class="">$450<span>per person</span></h3>
+                           <h6 class="total-price">
+                           Total price : $900</h2>
+                           <a href="javascript:void(0)" class="btn btn-success">Select Flight</a>
+                           <p class="flight-fare-rules">
+                              <span>Price includes taxes and fuel supplements - </span>
+                              <span class="farerule-link" onClick="showHideDiv('divMsg3')">Fare rules apply</span>
+							   <div id="divMsg3" class="fare" style="display:none">
+							      <h2>Fare rules</h2>
+										<h3>Fare Overview</h3>
+										<dl>
+										   <dt>From:</dt>
+										   <dd>Heathrow</dd>
+										   <dt>To:</dt>
+										   <dd>Chennai Intl</dd>
+										   <dt>Airline:</dt>
+										   <dd>Oman Air</dd>
+										   <dt>Adult Fare:</dt>
+										   <dd>$125.00</dd>
+										   <dt>Adult Tax:</dt>
+										   <dd>$322.07</dd>
+										   <dt>Cabin:</dt>
+										   <dd>Economy</dd>
+										   <dt>Fare Type:</dt>
+										   <dd>Cat35</dd>
+										</dl>
+										<h3>Cancellation cost</h3>
+										<dl>
+										   <dt>Cancellation Charge:</dt>
+										   <dd>$100</dd>
+										</dl>
+										<h3>Potential Costs</h3>
+										<dl>
+										   <dt>Pre Travel Return Date Change:</dt>
+										   <dd>$100</dd>
+										   <dt>Post Travel Return Date Change:</dt>
+										   <dd>$100</dd>
+										</dl>
+								</div>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 ordinary-flight-result">
+                     <div class="col-md-9 col-sm-8 col-xs-12 flight-dtls" style="padding: 0px;">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+                           <div class="col-md-2 col-sm-2 col-xs-3">
+                              <p class="text-left">Economy</p>
+                              <img src="img/VS.svg">
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                           <div class="col-md-4 col-sm-4 col-xs-3 text-center">
+                              <p>16h</p>
+                              <div class="takeoff-line">
+                                 <span>	<i class="material-icons">flight_takeoff</i><span>
+                              </div>
+                              <p>1 Stop</p>
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3 flight-dest">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr class="flight-segment">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+                           <div class="col-md-2 col-sm-2 col-xs-3">
+                              <p class="text-left">Economy</p>
+                              <img src="img/VS.svg">
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                           <div class="col-md-4 col-sm-4 col-xs-3 text-center">
+                              <p>16h</p>
+                              <div class="takeoff-line">
+                                 <span>	<i class="material-icons">flight_land</i><span>
+                              </div>
+                              <p>1 Stop</p>
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3 flight-dest">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr style="margin: 10px 16px;">
+                        <div class="flight-result-itinerary">
+                           <p class="itinerary-title">Full Itinerary
+                              <span class="itinerary-inclusions">Includes 
+                              <strong>30kg baggage per person > </strong>
+                              </span>
+                           </p>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col-sm-4 col-xs-12 flight-price">
+                        <div class="flightpice-cont">
+                           <h3 class="">$450<span>per person</span></h3>
+                           <h6 class="total-price">
+                           Total price : $900</h2>
+                           <a href="javascript:void(0)" class="btn btn-success">Select Flight</a>
+                           <p class="flight-fare-rules">
+                              <span>Price includes taxes and fuel supplements - </span>
+                              <span class="farerule-link" onClick="showHideDiv('divMsg4')">Fare rules apply</span>
+							   <div id="divMsg4" class="fare" style="display:none">
+							      <h2>Fare rules</h2>
+										<h3>Fare Overview</h3>
+										<dl>
+										   <dt>From:</dt>
+										   <dd>Heathrow</dd>
+										   <dt>To:</dt>
+										   <dd>Chennai Intl</dd>
+										   <dt>Airline:</dt>
+										   <dd>Oman Air</dd>
+										   <dt>Adult Fare:</dt>
+										   <dd>$125.00</dd>
+										   <dt>Adult Tax:</dt>
+										   <dd>$322.07</dd>
+										   <dt>Cabin:</dt>
+										   <dd>Economy</dd>
+										   <dt>Fare Type:</dt>
+										   <dd>Cat35</dd>
+										</dl>
+										<h3>Cancellation cost</h3>
+										<dl>
+										   <dt>Cancellation Charge:</dt>
+										   <dd>$100</dd>
+										</dl>
+										<h3>Potential Costs</h3>
+										<dl>
+										   <dt>Pre Travel Return Date Change:</dt>
+										   <dd>$100</dd>
+										   <dt>Post Travel Return Date Change:</dt>
+										   <dd>$100</dd>
+										</dl>
+								</div>
+							  <br><br>
+								
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+				  <div class="col-md-12 col-sm-12 col-xs-12 ordinary-flight-result">
+                     <div class="col-md-9 col-sm-8 col-xs-12 flight-dtls" style="padding: 0px;">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+                           <div class="col-md-2 col-sm-2 col-xs-3">
+                              <p class="text-left">Economy</p>
+                              <img src="img/VS.svg">
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                           <div class="col-md-4 col-sm-4 col-xs-3 text-center">
+                              <p>16h</p>
+                              <div class="takeoff-line">
+                                 <span>	<i class="material-icons">flight_takeoff</i><span>
+                              </div>
+                              <p>1 Stop</p>
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3 flight-dest">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr class="flight-segment">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+                           <div class="col-md-2 col-sm-2 col-xs-3">
+                              <p class="text-left">Economy</p>
+                              <img src="img/VS.svg">
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                           <div class="col-md-4 col-sm-4 col-xs-3 text-center">
+                              <p>16h</p>
+                              <div class="takeoff-line">
+                                 <span>	<i class="material-icons">flight_land</i><span>
+                              </div>
+                              <p>1 Stop</p>
+                           </div>
+                           <div class="col-md-2 col-sm-3 col-xs-3 flight-dest">
+                              <h3 class="">10:30</h3>
+                              <h2>LHR</h2>
+                              <p class="city">Heathrow</p>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr style="margin: 10px 16px;">
+                        <div class="flight-result-itinerary">
+                           <p class="itinerary-title">Full Itinerary
+                              <span class="itinerary-inclusions">Includes 
+                              <strong>30kg baggage per person > </strong>
+                              </span>
+                           </p>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col-sm-4 col-xs-12 flight-price">
+                        <div class="flightpice-cont">
+                           <h3 class="">$450<span>per person</span></h3>
+                           <h6 class="total-price">
+                           Total price : $900</h2>
+                           <a href="javascript:void(0)" class="btn btn-success">Select Flight</a>
+                           <p class="flight-fare-rules">
+                              <span>Price includes taxes and fuel supplements - </span>
+                              <span class="farerule-link" onClick="showHideDiv('divMsg5')">Fare rules apply</span>
+							   <div id="divMsg5" class="fare" style="display:none">
+							      <h2>Fare rules</h2>
+										<h3>Fare Overview</h3>
+										<dl>
+										   <dt>From:</dt>
+										   <dd>Heathrow</dd>
+										   <dt>To:</dt>
+										   <dd>Chennai Intl</dd>
+										   <dt>Airline:</dt>
+										   <dd>Oman Air</dd>
+										   <dt>Adult Fare:</dt>
+										   <dd>$125.00</dd>
+										   <dt>Adult Tax:</dt>
+										   <dd>$322.07</dd>
+										   <dt>Cabin:</dt>
+										   <dd>Economy</dd>
+										   <dt>Fare Type:</dt>
+										   <dd>Cat35</dd>
+										</dl>
+										<h3>Cancellation cost</h3>
+										<dl>
+										   <dt>Cancellation Charge:</dt>
+										   <dd>$100</dd>
+										</dl>
+										<h3>Potential Costs</h3>
+										<dl>
+										   <dt>Pre Travel Return Date Change:</dt>
+										   <dd>$100</dd>
+										   <dt>Post Travel Return Date Change:</dt>
+										   <dd>$100</dd>
+										</dl>
+								</div>
+							  <br><br>
+								
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </section>
+	   <section class="footer">
+		 <div class="container">
+			<p>The flight-inclusive holidays on this website which depart from the UK are financially protected by the ATOL scheme. 
+			This website is intended primarily to residents of the UK and all bookings are subject to our terms and conditions found here. 
+			But ATOL protection does not apply to all holiday and travel services listed (e.g car hire or accommodation only bookings).
+			Please ask us to confirm what protection may apply to your booking. If you do not receive an ATOL certificate then the booking will not be ATOL protected. 
+			If you do receive an ATOL Certificate but all the parts of your trip are not listed on it, those parts will not be protected. 
+			Please see our booking conditions for information or for more information about financial protection and the ATOL certificate 
+			go to: www.caa.co.uk/ATOLCertificate. 
+			Please note: A fee applies to telephonic bookings.
+			</p>
+			
+			<div class="col-md-12">
+			<div class="col-md-6 col-sm-6 col-xs-6">
+			 <span class="copyright">© Copyright 2020 All rights reserved</span>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 social-icons text-right">
+			  <span class="followus"> Follow Us </span>
+					<a href=""><i class="fa fa-facebook-square"></i></a>
+					<a href=""><i class="fa fa-twitter-square"></i></a>
+					<a href=""><i class="fa fa-youtube-square"></i></a>
+					<a href=""><i class="fa fa-linkedin"></i></a>
+				</div>
+				
+			</div>
+		 </div>
+		 
+	  </section>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script language="JavaScript">
+        $(document).ready(function() {
+         $('.lab-slide-up').find('a').attr('data-toggle', 'modal');
+         $('.lab-slide-up').find('a').attr('data-target', '#lab-slide-bottom-popup');
+         });
+         });
+      </script>
+      <script type="text/javascript">
+			function showHideDiv(ele) {
+				var srcElement = document.getElementById(ele);
+				if (srcElement != null) {
+					if (srcElement.style.display == "block") {
+						srcElement.style.display = 'none';
+					}
+					else {
+						srcElement.style.display = 'block';
+					}
+					return false;
+				}
+			}
+		</script>
+   </body>
+</html>

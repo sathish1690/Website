@@ -40,6 +40,38 @@
       <section class="search-wrapper">
          <section class="flight-resultsection">
             <div class="container">
+			<div class="col-md-12 col-xs-12 col-sm-12 mobile-view" style="padding:0px;">
+			     <div class="col-md-12  col-xs-12 col-sm-8 search-sort text-center">
+                       <div id="holidays-dis" style="margin-top:18px;">
+                        <div class="col-md-10 return-cty">
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Pick-up location</label></span>
+                              <input type="text" class="form-control" id="departure" placeholder="">
+                              <i class="material-icons">directions_car</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Drop-off location</label></span>
+                              <input type="text" class="form-control" id="destination" placeholder="">
+                              <i class="material-icons">directions_car</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input id="txtDepDate" value="" size="30" class="calender-input" readonly="readonly"/>
+                              <input id="txtDestDate" class="calender-destinput" value="" readonly="readonly" />
+                              <i class="material-icons">date_range</i>
+                           </div>
+                           <div class="form-group col-md-3">
+                              <input type="dropdown" class="form-control" id="destination" placeholder="Driver's age">
+                              <i class="material-icons">people</i>
+                           </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                           <a href="car-search.html"><button class="btn btn-success btn-livesearch">Modify Search</button></a>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
+			
+			
                <!-- <div id="sub3" style="display:none;">-->
                <div class="modal fade" id="lab-slide-bottom-popup" data-keyboard="false" data-backdrop="false">
                   <div class="modal-header">
@@ -298,47 +330,64 @@
                      
                   </div>
                </div>
+			    
+			   
                <div class="col-md-7 col-xs-12 col-sm-12 mobile-view">
-                  <div class="col-md-12  col-xs-12 col-sm-8 search-sort text-center">
-                     <div class="col-md-6 col-xs-6 col-sm-4 cheapest">
-                        <h3 class="">Cheapest</h3>
-                        <h2>$415</h2>
-                        <p>17h, 1 Stop</p>
-                     </div>
-                     <div class="col-md-6 col-xs-6 col-sm-4 fastest">
-                        <h3 class="">Fastest</h3>
-                        <h2>$455</h2>
-                        <p>17h, 1 Stop</p>
-                     </div>
-                  </div>
+                
                   <div class="clearfix"></div>
                      <div class="col-md-12 col-sm-12 col-xs-12 hotel-result">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                           <div class="col-md-5 col-sm-5 col-xs-12">
+                           <div class="col-md-4 col-sm-3 col-xs-12">
                               <p class="text-left hotel-name">Kia Rio or Similar </p>
 							  <span>Economy <span>
 							  <div class="">
 								<img src="img/car/car1.png" class="img-responsive">
 							  </div>
                            </div>
-                           
-                           <div class="col-md-4 col-sm-3 col-xs-6 car-dtls">
-                              <ul class="passenger-dtls list-inline text-center">
-								<li><img src="img/icons/user.png"><p>x5</p></li>
-								 
-								<li><img src="img/icons/bag.png"><p>x2</p></li>
-								<li><img src="img/icons/car-door.png"><p>5</p></li>
-							  </ul>
-                              <ul class="passenger-dtls list-inline text-center">
-								<li><img src="img/icons/asterisk.png"><p>Air con</p></li>
-								<li><img src="img/icons/fuel.png"><p>Air con</p></li>
-								<li><img src="img/icons/list.png"><p>Air con</p></li>
-							
-							  </ul>
+                          
+                           <div class="col-md-5 col-sm-5 col-xs-12 car-dtls">
+                              <div class="passenger-dtls text-center">
+								  <div class="col-md-4 col-xs-4 car-tooltip">
+								  <img src="img/icons/user.png"><p>x5</p>
+									<span class="tooltiptext"> Your car will fit a total of 5 passengers </span>
+								 </div>
+								  <div class="col-md-4 col-xs-4 car-tooltip">
+								  <img src="img/icons/bag.png"><p>x2</p>
+									<span class="tooltiptext"> Your car can fit x 2 small suitcases </span>
+								 </div>
+								 <div class="col-md-4 col-xs-4 car-tooltip">
+								   <img src="img/icons/car-door.png"><p>5</p>
+									<span class="tooltiptext"> Your car has 4 doors </span>
+								 </div>
+							  </div>
+                              <div class="passenger-dtls list-inline text-center">
+								    <div class="col-md-4 col-xs-4 car-tooltip">
+										<img src="img/icons/asterisk.png"><p>Air con</p>
+										<span class="tooltiptext"> Your car has Air Conditioning included </span>
+									 </div>
+									<div class="col-md-4 col-xs-4 car-tooltip">
+										<img src="img/icons/fuel.png"><p>Full to Full</p>
+										<span class="tooltiptext">Full to Full. Your car will be supplied with a full tank of fuel and must be returned full. 
+										Other fuel options may be available when collecting your car.</span>
+									</div>
+									<div class="col-md-4 col-xs-4 car-tooltip">
+									<img src="img/icons/list.png"><p>What's included?</p>
+										<span class="tooltiptext">
+										<p class="inclusion-item"><i class="fa fa-check"></i> Unlimited Mileage</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Collision Damage Waiver</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Loss Damage Waiver</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Theft Protection Insurance</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Local &amp; State Taxes</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Supplemental Liability Ins.</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Airport Surcharge</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  24 Hour Mechanical Breakdown Assistance</p
+										</span>
+									</div>
+							  </div>
                            </div>
                            <div class="col-md-3 col-sm-4 col-xs-6 holiday-pricedtls">
 								    <div class="holiday-bookingdiscrp">
-										<h3>$45654</h4>
+										<h3>$45</h4>
 								    </div>	
 							   	<button class="btn btn-success more_details">More Details <i class="fa fa-caret-right"></i> </button>
                            </div>
@@ -352,8 +401,185 @@
 								<li>
 									<img src="img/AL.gif">
 								</li>
-								<li>
+								<li class="car-tooltip onAirport">
 									On Airport
+									<span class="tooltiptext"> There will be a desk in the airport terminal near the arrivals area </span>
+								</li>
+								<li>
+									London airport
+								</li>
+							   </ul>
+						<ul class="list-inline car-info">
+								<li>
+									<p>For information regarding deposits, insurance excess and additional fees, please read the Car Rental Key Facts before booking.</p>
+								</li>
+						
+						</ul>
+						<ul class="list-inline car-tips">
+								<li>
+									<p>Expert tips: Check out the upgrade offers available - it could save you more!</p>
+								</li>
+						
+						</ul>
+                        </div>
+                        </div>
+                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-result">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                           <div class="col-md-4 col-sm-3 col-xs-12">
+                              <p class="text-left hotel-name">Nissan Versa Note or Similar</p>
+							  <span>Economy <span>
+							  <div class="">
+								<img src="img/car/car2.png" class="img-responsive">
+							  </div>
+                           </div>
+                          
+                           <div class="col-md-5 col-sm-5 col-xs-12 car-dtls">
+                              <div class="passenger-dtls text-center">
+								  <div class="col-md-4 col-xs-4 car-tooltip">
+								  <img src="img/icons/user.png"><p>x5</p>
+									<span class="tooltiptext"> Your car will fit a total of 5 passengers </span>
+								 </div>
+								  <div class="col-md-4 col-xs-4 car-tooltip">
+								  <img src="img/icons/bag.png"><p>x2</p>
+									<span class="tooltiptext"> Your car can fit x 2 small suitcases </span>
+								 </div>
+								 <div class="col-md-4 col-xs-4 car-tooltip">
+								   <img src="img/icons/car-door.png"><p>5</p>
+									<span class="tooltiptext"> Your car has 4 doors </span>
+								 </div>
+							  </div>
+                              <div class="passenger-dtls list-inline text-center">
+								    <div class="col-md-4 col-xs-4 car-tooltip">
+										<img src="img/icons/asterisk.png"><p>Air con</p>
+										<span class="tooltiptext"> Your car has Air Conditioning included </span>
+									 </div>
+									<div class="col-md-4 col-xs-4 car-tooltip">
+										<img src="img/icons/fuel.png"><p>Full to Full</p>
+										<span class="tooltiptext">Full to Full. Your car will be supplied with a full tank of fuel and must be returned full. 
+										Other fuel options may be available when collecting your car.</span>
+									</div>
+									<div class="col-md-4 col-xs-4 car-tooltip">
+									<img src="img/icons/list.png"><p>What's included?</p>
+										<span class="tooltiptext">
+										<p class="inclusion-item"><i class="fa fa-check"></i> Unlimited Mileage</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Collision Damage Waiver</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Loss Damage Waiver</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Theft Protection Insurance</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Local &amp; State Taxes</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Supplemental Liability Ins.</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Airport Surcharge</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  24 Hour Mechanical Breakdown Assistance</p
+										</span>
+									</div>
+							  </div>
+                           </div>
+                           <div class="col-md-3 col-sm-4 col-xs-6 holiday-pricedtls">
+								    <div class="holiday-bookingdiscrp">
+										<h3>$45</h4>
+								    </div>	
+							   	<button class="btn btn-success more_details">More Details <i class="fa fa-caret-right"></i> </button>
+                           </div>
+						   
+                        </div>
+						   <div class="clearfix"></div>
+								<div class="col-md-9 col-sm-12 col-xs-12 car-divider"></div>
+						   <div class="clearfix"></div>
+						<div class="hotel-flight-info">
+						<ul class="list-inline car-dest-dtls">
+								<li>
+									<img src="img/AL.gif">
+								</li>
+								<li class="car-tooltip onAirport">
+									On Airport
+									<span class="tooltiptext"> There will be a desk in the airport terminal near the arrivals area </span>
+								</li>
+								<li>
+									London airport
+								</li>
+							   </ul>
+						<ul class="list-inline car-info">
+								<li>
+									<p>For information regarding deposits, insurance excess and additional fees, please read the Car Rental Key Facts before booking.</p>
+								</li>
+						
+						</ul>
+						<ul class="list-inline car-tips">
+								<li>
+									<p>Expert tips: Check out the upgrade offers available - it could save you more!</p>
+								</li>
+						
+						</ul>
+                        </div>
+                        </div>
+                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-result">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                           <div class="col-md-4 col-sm-3 col-xs-12">
+                              <p class="text-left hotel-name">Kia Rio or Similar </p>
+							  <span>Economy <span>
+							  <div class="">
+								<img src="img/car/car1.png" class="img-responsive">
+							  </div>
+                           </div>
+                          
+                           <div class="col-md-5 col-sm-5 col-xs-12 car-dtls">
+                              <div class="passenger-dtls text-center">
+								  <div class="col-md-4 col-xs-4 car-tooltip">
+								  <img src="img/icons/user.png"><p>x5</p>
+									<span class="tooltiptext"> Your car will fit a total of 5 passengers </span>
+								 </div>
+								  <div class="col-md-4 col-xs-4 car-tooltip">
+								  <img src="img/icons/bag.png"><p>x2</p>
+									<span class="tooltiptext"> Your car can fit x 2 small suitcases </span>
+								 </div>
+								 <div class="col-md-4 col-xs-4 car-tooltip">
+								   <img src="img/icons/car-door.png"><p>5</p>
+									<span class="tooltiptext"> Your car has 4 doors </span>
+								 </div>
+							  </div>
+                              <div class="passenger-dtls list-inline text-center">
+								    <div class="col-md-4 col-xs-4 car-tooltip">
+										<img src="img/icons/asterisk.png"><p>Air con</p>
+										<span class="tooltiptext"> Your car has Air Conditioning included </span>
+									 </div>
+									<div class="col-md-4 col-xs-4 car-tooltip">
+										<img src="img/icons/fuel.png"><p>Full to Full</p>
+										<span class="tooltiptext">Full to Full. Your car will be supplied with a full tank of fuel and must be returned full. 
+										Other fuel options may be available when collecting your car.</span>
+									</div>
+									<div class="col-md-4 col-xs-4 car-tooltip">
+									<img src="img/icons/list.png"><p>What's included?</p>
+										<span class="tooltiptext">
+										<p class="inclusion-item"><i class="fa fa-check"></i> Unlimited Mileage</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Collision Damage Waiver</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Loss Damage Waiver</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Theft Protection Insurance</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Local &amp; State Taxes</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Supplemental Liability Ins.</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  Airport Surcharge</p>
+										<p class="inclusion-item"><i class="fa fa-check"></i>  24 Hour Mechanical Breakdown Assistance</p
+										</span>
+									</div>
+							  </div>
+                           </div>
+                           <div class="col-md-3 col-sm-4 col-xs-6 holiday-pricedtls">
+								    <div class="holiday-bookingdiscrp">
+										<h3>$45</h4>
+								    </div>	
+							   	<button class="btn btn-success more_details">More Details <i class="fa fa-caret-right"></i> </button>
+                           </div>
+						   
+                        </div>
+						   <div class="clearfix"></div>
+								<div class="col-md-9 col-sm-12 col-xs-12 car-divider"></div>
+						   <div class="clearfix"></div>
+						<div class="hotel-flight-info">
+						<ul class="list-inline car-dest-dtls">
+								<li>
+									<img src="img/AL.gif">
+								</li>
+								<li class="car-tooltip onAirport">
+									On Airport
+									<span class="tooltiptext"> There will be a desk in the airport terminal near the arrivals area </span>
 								</li>
 								<li>
 									London airport
@@ -441,10 +667,6 @@
 				}
 			}
 		</script>
-		<script>
-		$(document).ready(function(){
-		  $('[data-toggle="tooltip"]').tooltip();
-		});
-		</script>
+		
    </body>
 </html>

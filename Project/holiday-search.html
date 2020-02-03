@@ -40,26 +40,31 @@
       <section class="search-wrapper">
          <section class="flight-resultsection">
             <div class="container">
-			  <div class="col-md-12  col-xs-12 col-sm-8 search-sort text-center">
-                     <div id="holidays-dis" style="margin-top:18px;">
+			   <div class="col-md-12  col-xs-12 col-sm-8 search-sort text-center">
+                    <div id="holidays-dis" style="margin-top:18px;">
                         <div class="col-md-10 return-cty">
-                           <div class="form-group col-md-4">
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Departure</label></span>
+                              <input type="text" class="form-control" id="departure" placeholder="">
+                              <i class="material-icons">flight_takeoff</i>
+                           </div>
+                           <div class="form-group col-md-3">
                               <span class="label-input"><label>Destination</label></span>
                               <input type="text" class="form-control" id="destination" placeholder="">
-                              <i class="material-icons">hotel</i>
+                              <i class="material-icons">flight_land</i>
                            </div>
-                           <div class="form-group col-md-4">
+                           <div class="form-group col-md-3">
                               <input id="txtDepDate" value="" size="30" class="calender-input" readonly="readonly"/>
                               <input id="txtDestDate" class="calender-destinput" value="" readonly="readonly" />
                               <i class="material-icons">date_range</i>
                            </div>
-                           <div class="form-group col-md-4">
+                           <div class="form-group col-md-3">
                               <input type="dropdown" class="form-control" id="destination" placeholder="Passenger">
                               <i class="material-icons">people</i>
                            </div>
                         </div>
                         <div class="form-group col-md-2">
-                            <a href="hotel-search.html"> <button class="btn btn-success btn-livesearch">Modify Search</button></a>
+                          <a href="holiday-search.html"> <button class="btn btn-success btn-livesearch">Modify search</button></a>
                         </div>
                      </div>
                   </div>
@@ -626,7 +631,7 @@
                   </div>
                </div>
                <div class="col-md-7 col-xs-12 col-sm-12 mobile-view">
-                 
+                
                   <div class="clearfix"></div>
                   <div class="col-md-12 col-sm-12 col-xs-12 hotel-result">
                      <div class="col-md-12 col-sm-12 col-xs-12">
@@ -667,89 +672,76 @@
                         </div>
                      </div>
                      <div class="clearfix"></div>
-                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-dtlsmore">
-                        <p>With a stay at The Savoy, A Fairmont Managed Hotel, you'll be ...</p>
-                        <a href="javascript:void(0)"> more >></a>
+                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-itinerary">
+                        <p class="col-md-6 col-sm-6 col-xs-12">Pre-selected cheapest flight...</p>
+                        <p class="col-md-6 col-sm-6 col-xs-12 text-right">
+                           <button>Full Itinerary</button>
+                           <button>Change flight</button>
+                        </p>
                      </div>
                      <div class="clearfix"></div>
-                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-dtls">
-                        <ul class="list-inline">
-                           <li>
-                              <span class="room-type">Deluxe Junior Suite</span><br>
-                              <span class="room-selection">Room Only</span>
-                           </li>
-                           <li class="pull-right">
-                              <span class="room-price">
-                              $678
-                              </span>
-                              <span class="room-more-details"> 
-                              <a href="javascript:void(0)">  more Details >> </a>
-                              </span>
-                           </li>
-                        </ul>
-                        <ul class="list-inline">
-                           <li>
-                              <span class="room-type">Deluxe Junior Suite</span><br>
-                              <span class="room-selection">Bed and Breakfast</span>
-                           </li>
-                           <li class="pull-right">
-                              <span class="room-price">
-                              $678
-                              </span>
-                              <span class="room-more-details"> 
-                              <a href="javascript:void(0)">  more Details >> </a>
-                              </span>
-                           </li>
-                        </ul>
-                        <div class="box">
-                           <div class="top text-center view-dropdown">
-                              View more rooms and board basis <i class="fa fa-arrow-down"></i> 
-                           </div>
-                           <div class="bottom" style="display:none;">
-                              <ul class="list-inline">
-                                 <li>
-                                    <span class="room-type">Deluxe Junior Suite</span><br>
-                                    <span class="room-selection">Room Only</span>
-                                 </li>
-                                 <li class="pull-right">
-                                    <span class="room-price">
-                                    $678
-                                    </span>
-                                    <span class="room-more-details"> 
-                                    <a href="javascript:void(0)">  more Details >> </a>
-                                    </span>
-                                 </li>
-                              </ul>
-                              <ul class="list-inline">
-                                 <li>
-                                    <span class="room-type">Deluxe Junior Suite</span><br>
-                                    <span class="room-selection">Room Only</span>
-                                 </li>
-                                 <li class="pull-right">
-                                    <span class="room-price">
-                                    $678
-                                    </span>
-                                    <span class="room-more-details"> 
-                                    <a href="javascript:void(0)">  more Details >> </a>
-                                    </span>
-                                 </li>
-                              </ul>
-                              <ul class="list-inline">
-                                 <li>
-                                    <span class="room-type">Deluxe Junior Suite</span><br>
-                                    <span class="room-selection">Room Only</span>
-                                 </li>
-                                 <li class="pull-right">
-                                    <span class="room-price">
-                                    $678
-                                    </span>
-                                    <span class="room-more-details"> 
-                                    <a href="javascript:void(0)">  more Details >> </a>
-                                    </span>
-                                 </li>
-                              </ul>
-                           </div>
+                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-flight-dtls">
+                        <div class="col-md-2 col-sm-2 col-xs-4 hotel-flight-img">
+                           <img src="img/VS.svg">
                         </div>
+                        <div class="col-md-10 col-sm-10 col-xs-8 hotel-inbound">
+                           <ul class="list-inline hotel-inbound-dtls">
+                              <li>
+                                 <span>07 February 2020</span>
+                              </li>
+                              <li>
+                                 <span class="departure">
+                                 <span class="airport">LHR</span> 
+                                 <span class="time">08:25</span> 
+                                 </span>
+                              </li>
+                              <li>
+                                 <span class="arrival"> 
+                                 <span class="airport">MAA</span> 
+                                 <span class="time">06:30</span> 
+                                 <span class="extra-days"> +1 day </span> 
+                                 </span>
+                              </li>
+                           </ul>
+                           <ul class="list-inline hotel-outbound-dtls">
+                              <li>
+                                 <span>07 February 2020</span>
+                              </li>
+                              <li>
+                                 <span class="departure">
+                                 <span class="airport">LHR</span> 
+                                 <span class="time">08:25</span> 
+                                 </span>
+                              </li>
+                              <li>
+                                 <span class="arrival"> 
+                                 <span class="airport">MAA</span> 
+                                 <span class="time">06:30</span> 
+                                 <span class="extra-days"> +1 day </span> 
+                                 </span>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="clearfix"></div>
+                     <div class="hotel-flight-info">
+                        <ul class="list-inline hotel-outbound-dtls">
+                           <li>
+                              <span class="flight-info">Flight info : </span> <span>5.3(fair)</span>
+                           </li>
+                           <li>
+                              <span>Duration : </span> <span class="flight-info-discrp">Slow</span>
+                           </li>
+                           <li>
+                              <span>Seat & amanities : </span> <span class="flight-info-discrp">Satisfactory</span>
+                           </li>
+                           <li>
+                              <span>Meal : </span> <span class="flight-info-discrp">Yes</span>
+                           </li>
+                           <li>
+                              <span>Bakkage : </span> <span class="flight-info-discrp">2 Checked bags</span>
+                           </li>
+                        </ul>
                      </div>
                   </div>
                   <div class="col-md-12 col-sm-12 col-xs-12 hotel-result">
@@ -791,89 +783,76 @@
                         </div>
                      </div>
                      <div class="clearfix"></div>
-                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-dtlsmore">
-                        <p>With a stay at The Savoy, A Fairmont Managed Hotel, you'll be ...</p>
-                        <a href="javascript:void(0)"> more >></a>
+                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-itinerary">
+                        <p class="col-md-6 col-sm-6 col-xs-12">Pre-selected cheapest flight...</p>
+                        <p class="col-md-6 col-sm-6 col-xs-12 text-right">
+                           <button>Full Itinerary</button>
+                           <button>Change flight</button>
+                        </p>
                      </div>
                      <div class="clearfix"></div>
-                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-dtls">
-                        <ul class="list-inline">
-                           <li>
-                              <span class="room-type">Deluxe Junior Suite</span><br>
-                              <span class="room-selection">Room Only</span>
-                           </li>
-                           <li class="pull-right">
-                              <span class="room-price">
-                              $678
-                              </span>
-                              <span class="room-more-details"> 
-                              <a href="javascript:void(0)">  more Details >> </a>
-                              </span>
-                           </li>
-                        </ul>
-                        <ul class="list-inline">
-                           <li>
-                              <span class="room-type">Deluxe Junior Suite</span><br>
-                              <span class="room-selection">Bed and Breakfast</span>
-                           </li>
-                           <li class="pull-right">
-                              <span class="room-price">
-                              $678
-                              </span>
-                              <span class="room-more-details"> 
-                              <a href="javascript:void(0)">  more Details >> </a>
-                              </span>
-                           </li>
-                        </ul>
-                        <div class="box">
-                           <div class="top text-center view-dropdown">
-                              View more rooms and board basis <i class="fa fa-arrow-down"></i> 
-                           </div>
-                           <div class="bottom" style="display:none;">
-                              <ul class="list-inline">
-                                 <li>
-                                    <span class="room-type">Deluxe Junior Suite</span><br>
-                                    <span class="room-selection">Room Only</span>
-                                 </li>
-                                 <li class="pull-right">
-                                    <span class="room-price">
-                                    $678
-                                    </span>
-                                    <span class="room-more-details"> 
-                                    <a href="javascript:void(0)">  more Details >> </a>
-                                    </span>
-                                 </li>
-                              </ul>
-                              <ul class="list-inline">
-                                 <li>
-                                    <span class="room-type">Deluxe Junior Suite</span><br>
-                                    <span class="room-selection">Room Only</span>
-                                 </li>
-                                 <li class="pull-right">
-                                    <span class="room-price">
-                                    $678
-                                    </span>
-                                    <span class="room-more-details"> 
-                                    <a href="javascript:void(0)">  more Details >> </a>
-                                    </span>
-                                 </li>
-                              </ul>
-                              <ul class="list-inline">
-                                 <li>
-                                    <span class="room-type">Deluxe Junior Suite</span><br>
-                                    <span class="room-selection">Room Only</span>
-                                 </li>
-                                 <li class="pull-right">
-                                    <span class="room-price">
-                                    $678
-                                    </span>
-                                    <span class="room-more-details"> 
-                                    <a href="javascript:void(0)">  more Details >> </a>
-                                    </span>
-                                 </li>
-                              </ul>
-                           </div>
+                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-flight-dtls">
+                        <div class="col-md-2 col-sm-2 col-xs-4 hotel-flight-img">
+                           <img src="img/VS.svg">
                         </div>
+                        <div class="col-md-10 col-sm-10 col-xs-8 hotel-inbound">
+                           <ul class="list-inline hotel-inbound-dtls">
+                              <li>
+                                 <span>07 February 2020</span>
+                              </li>
+                              <li>
+                                 <span class="departure">
+                                 <span class="airport">LHR</span> 
+                                 <span class="time">08:25</span> 
+                                 </span>
+                              </li>
+                              <li>
+                                 <span class="arrival"> 
+                                 <span class="airport">MAA</span> 
+                                 <span class="time">06:30</span> 
+                                 <span class="extra-days"> +1 day </span> 
+                                 </span>
+                              </li>
+                           </ul>
+                           <ul class="list-inline hotel-outbound-dtls">
+                              <li>
+                                 <span>07 February 2020</span>
+                              </li>
+                              <li>
+                                 <span class="departure">
+                                 <span class="airport">LHR</span> 
+                                 <span class="time">08:25</span> 
+                                 </span>
+                              </li>
+                              <li>
+                                 <span class="arrival"> 
+                                 <span class="airport">MAA</span> 
+                                 <span class="time">06:30</span> 
+                                 <span class="extra-days"> +1 day </span> 
+                                 </span>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="clearfix"></div>
+                     <div class="hotel-flight-info">
+                        <ul class="list-inline hotel-outbound-dtls">
+                           <li>
+                              <span class="flight-info">Flight info : </span> <span>5.3(fair)</span>
+                           </li>
+                           <li>
+                              <span>Duration : </span> <span class="flight-info-discrp">Slow</span>
+                           </li>
+                           <li>
+                              <span>Seat & amanities : </span> <span class="flight-info-discrp">Satisfactory</span>
+                           </li>
+                           <li>
+                              <span>Meal : </span> <span class="flight-info-discrp">Yes</span>
+                           </li>
+                           <li>
+                              <span>Bakkage : </span> <span class="flight-info-discrp">2 Checked bags</span>
+                           </li>
+                        </ul>
                      </div>
                   </div>
                   <div class="col-md-12 col-sm-12 col-xs-12 hotel-result">
@@ -915,89 +894,76 @@
                         </div>
                      </div>
                      <div class="clearfix"></div>
-                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-dtlsmore">
-                        <p>With a stay at The Savoy, A Fairmont Managed Hotel, you'll be ...</p>
-                        <a href="javascript:void(0)"> more >></a>
+                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-itinerary">
+                        <p class="col-md-6 col-sm-6 col-xs-12">Pre-selected cheapest flight...</p>
+                        <p class="col-md-6 col-sm-6 col-xs-12 text-right">
+                           <button>Full Itinerary</button>
+                           <button>Change flight</button>
+                        </p>
                      </div>
                      <div class="clearfix"></div>
-                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-dtls">
-                        <ul class="list-inline">
-                           <li>
-                              <span class="room-type">Deluxe Junior Suite</span><br>
-                              <span class="room-selection">Room Only</span>
-                           </li>
-                           <li class="pull-right">
-                              <span class="room-price">
-                              $678
-                              </span>
-                              <span class="room-more-details"> 
-                              <a href="javascript:void(0)">  more Details >> </a>
-                              </span>
-                           </li>
-                        </ul>
-                        <ul class="list-inline">
-                           <li>
-                              <span class="room-type">Deluxe Junior Suite</span><br>
-                              <span class="room-selection">Bed and Breakfast</span>
-                           </li>
-                           <li class="pull-right">
-                              <span class="room-price">
-                              $678
-                              </span>
-                              <span class="room-more-details"> 
-                              <a href="javascript:void(0)">  more Details >> </a>
-                              </span>
-                           </li>
-                        </ul>
-                        <div class="box">
-                           <div class="top text-center view-dropdown">
-                              View more rooms and board basis <i class="fa fa-arrow-down"></i> 
-                           </div>
-                           <div class="bottom" style="display:none;">
-                              <ul class="list-inline">
-                                 <li>
-                                    <span class="room-type">Deluxe Junior Suite</span><br>
-                                    <span class="room-selection">Room Only</span>
-                                 </li>
-                                 <li class="pull-right">
-                                    <span class="room-price">
-                                    $678
-                                    </span>
-                                    <span class="room-more-details"> 
-                                    <a href="javascript:void(0)">  more Details >> </a>
-                                    </span>
-                                 </li>
-                              </ul>
-                              <ul class="list-inline">
-                                 <li>
-                                    <span class="room-type">Deluxe Junior Suite</span><br>
-                                    <span class="room-selection">Room Only</span>
-                                 </li>
-                                 <li class="pull-right">
-                                    <span class="room-price">
-                                    $678
-                                    </span>
-                                    <span class="room-more-details"> 
-                                    <a href="javascript:void(0)">  more Details >> </a>
-                                    </span>
-                                 </li>
-                              </ul>
-                              <ul class="list-inline">
-                                 <li>
-                                    <span class="room-type">Deluxe Junior Suite</span><br>
-                                    <span class="room-selection">Room Only</span>
-                                 </li>
-                                 <li class="pull-right">
-                                    <span class="room-price">
-                                    $678
-                                    </span>
-                                    <span class="room-more-details"> 
-                                    <a href="javascript:void(0)">  more Details >> </a>
-                                    </span>
-                                 </li>
-                              </ul>
-                           </div>
+                     <div class="col-md-12 col-sm-12 col-xs-12 hotel-flight-dtls">
+                        <div class="col-md-2 col-sm-2 col-xs-4 hotel-flight-img">
+                           <img src="img/VS.svg">
                         </div>
+                        <div class="col-md-10 col-sm-10 col-xs-8 hotel-inbound">
+                           <ul class="list-inline hotel-inbound-dtls">
+                              <li>
+                                 <span>07 February 2020</span>
+                              </li>
+                              <li>
+                                 <span class="departure">
+                                 <span class="airport">LHR</span> 
+                                 <span class="time">08:25</span> 
+                                 </span>
+                              </li>
+                              <li>
+                                 <span class="arrival"> 
+                                 <span class="airport">MAA</span> 
+                                 <span class="time">06:30</span> 
+                                 <span class="extra-days"> +1 day </span> 
+                                 </span>
+                              </li>
+                           </ul>
+                           <ul class="list-inline hotel-outbound-dtls">
+                              <li>
+                                 <span>07 February 2020</span>
+                              </li>
+                              <li>
+                                 <span class="departure">
+                                 <span class="airport">LHR</span> 
+                                 <span class="time">08:25</span> 
+                                 </span>
+                              </li>
+                              <li>
+                                 <span class="arrival"> 
+                                 <span class="airport">MAA</span> 
+                                 <span class="time">06:30</span> 
+                                 <span class="extra-days"> +1 day </span> 
+                                 </span>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="clearfix"></div>
+                     <div class="hotel-flight-info">
+                        <ul class="list-inline hotel-outbound-dtls">
+                           <li>
+                              <span class="flight-info">Flight info : </span> <span>5.3(fair)</span>
+                           </li>
+                           <li>
+                              <span>Duration : </span> <span class="flight-info-discrp">Slow</span>
+                           </li>
+                           <li>
+                              <span>Seat & amanities : </span> <span class="flight-info-discrp">Satisfactory</span>
+                           </li>
+                           <li>
+                              <span>Meal : </span> <span class="flight-info-discrp">Yes</span>
+                           </li>
+                           <li>
+                              <span>Bakkage : </span> <span class="flight-info-discrp">2 Checked bags</span>
+                           </li>
+                        </ul>
                      </div>
                   </div>
                </div>
@@ -1011,7 +977,6 @@
                   </div>
                   <p class="call-us">Call us now on <br><span class="callus-no"> 9454503233</span></p>
                </div>
-            </div>
             </div>
          </section>
       </section>
@@ -1065,11 +1030,6 @@
          		return false;
          	}
          }
-         $('.top').on('click', function() {
-         	$parent_box = $(this).closest('.box');
-         	$parent_box.siblings().find('.bottom').slideUp();
-         	$parent_box.find('.bottom').slideToggle(1000, 'swing');
-         });
       </script>
    </body>
 </html>

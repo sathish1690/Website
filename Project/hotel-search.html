@@ -9,6 +9,7 @@
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/owl.carousel.css">
       <link rel="stylesheet" href ="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+	  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
    </head>
    <body>
       <section class="search-result-page">
@@ -49,8 +50,7 @@
                               <i class="material-icons">hotel</i>
                            </div>
                            <div class="form-group col-md-4">
-                              <input id="txtDepDate" value="" size="30" class="calender-input" readonly="readonly"/>
-                              <input id="txtDestDate" class="calender-destinput" value="" readonly="readonly" />
+                               <input type="text" name="book-date" class="form-control br-1" placeholder="mm/dd/yyyy" readonly="readonly" >
                               <i class="material-icons">date_range</i>
                            </div>
                            <div class="form-group col-md-4">
@@ -663,7 +663,7 @@
                                  <p class="priceperperson"><i class="material-icons">arrow_right</i>  <i class="fa fa-user"></i> $2456 per person</p>
                               </div>
                            </div>
-                           <button class="btn btn-success more_details">More Details <i class="fa fa-caret-right"></i> </button>
+                           <a href="hotel-details.html"><button class="btn btn-success more_details">More Details <i class="fa fa-caret-right"></i> </button></a>
                         </div>
                      </div>
                      <div class="clearfix"></div>
@@ -787,7 +787,7 @@
                                  <p class="priceperperson"><i class="material-icons">arrow_right</i>  <i class="fa fa-user"></i> $2456 per person</p>
                               </div>
                            </div>
-                           <button class="btn btn-success more_details">More Details <i class="fa fa-caret-right"></i> </button>
+                           <a href="hotel-details.html"><button class="btn btn-success more_details">More Details <i class="fa fa-caret-right"></i> </button></a>
                         </div>
                      </div>
                      <div class="clearfix"></div>
@@ -911,7 +911,7 @@
                                  <p class="priceperperson"><i class="material-icons">arrow_right</i>  <i class="fa fa-user"></i> $2456 per person</p>
                               </div>
                            </div>
-                           <button class="btn btn-success more_details">More Details <i class="fa fa-caret-right"></i> </button>
+                           <a href="hotel-details.html"><button class="btn btn-success more_details">More Details <i class="fa fa-caret-right"></i> </button></a>
                         </div>
                      </div>
                      <div class="clearfix"></div>
@@ -1045,6 +1045,26 @@
       <script src="js/custom.js"></script>
       <script src="js/owl.carousel.min.js"></script>
       <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	   <script src="js/moment.min.js"></script>
+      <script src="js/daterangepicker.js"></script>
+	  <script>
+			$(function() {
+			  $('input[name="book-date"]').daterangepicker({
+			     minDate: moment(),
+				 maxDate: moment().add(1, 'years'),
+				  autoUpdateInput: false,
+				  locale: {
+					  cancelLabel: 'Clear'
+				  }
+			  });
+			  $('input[name="book-date"]').on('apply.daterangepicker', function(ev, picker) {
+				  $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+			  });
+			  $('input[name="book-date"]').on('cancel.daterangepicker', function(ev, picker) {
+				  $(this).val('');
+			  });
+			});
+		</script>
       <script language="JavaScript">
          $(document).ready(function() {
           $('.lab-slide-up').find('a').attr('data-toggle', 'modal');

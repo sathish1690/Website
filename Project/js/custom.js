@@ -52,23 +52,23 @@ $(function() {
 		 minDate: 0,
 		 maxDate: "+1y",
          dateFormat: 'dd/mm',
-        onClose: function( selectedDate ) {
+        onClose: function( selectDate ) {
             var date = $(this).datepicker('getDate');
            //date2.datepicker("setDate", date);
-			$("#txtDestDate").datepicker("option", "minDate", selectedDate);
+			$("#txtDestDate").datepicker("option", "minDate", selectDate);
             date2.datepicker( "show" );
         }
     }).datepicker("setDate", "0");
-	
     date2.datepicker({
         defaultDate: "+1w",
         changeMonth: false,
         numberOfMonths: 2,
 		dateFormat: 'dd/mm',
-        onClose: function( selectedDate ) {
+        onClose: function( selectDate ) {
             var date = $(this).datepicker("getDate");
             var formattedDate = $.datepicker.formatDate('dd/mm', date);
             date1.val(date1.val() + " - " + formattedDate);
+
         }
     })
 });

@@ -9,6 +9,7 @@
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/owl.carousel.css">
       <link rel="stylesheet" href ="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+	  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
    </head>
    <body>
       <section class="banner-sec">
@@ -55,12 +56,12 @@
                               <i class="material-icons">directions_car</i>
                            </div>
                            <div class="form-group col-md-3">
-                              <input id="txtDepDate" value="" size="30" class="calender-input" readonly="readonly"/>
-                              <input id="txtDestDate" class="calender-destinput" value="" readonly="readonly" />
+                             <input type="text" name="book-date" class="form-control br-1" placeholder="mm/dd/yyyy" readonly="readonly" >
                               <i class="material-icons">date_range</i>
                            </div>
                            <div class="form-group col-md-3">
-                              <input type="dropdown" class="form-control" id="destination" placeholder="Driver's age">
+						       <span class="label-input"><label>Driver's age</label></span>
+                              <input type="dropdown" class="form-control" id="destination" placeholder="">
                               <i class="material-icons">people</i>
                            </div>
                         </div>
@@ -233,5 +234,25 @@
       <script src="js/custom.js"></script>
       <script src="js/owl.carousel.min.js"></script>
       <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	  <script src="js/moment.min.js"></script>
+      <script src="js/daterangepicker.js"></script>
+	  <script>
+			$(function() {
+			  $('input[name="book-date"]').daterangepicker({
+			     minDate: moment(),
+				 maxDate: moment().add(1, 'years'),
+				  autoUpdateInput: false,
+				  locale: {
+					  cancelLabel: 'Clear'
+				  }
+			  });
+			  $('input[name="book-date"]').on('apply.daterangepicker', function(ev, picker) {
+				  $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+			  });
+			  $('input[name="book-date"]').on('cancel.daterangepicker', function(ev, picker) {
+				  $(this).val('');
+			  });
+			});
+		</script>
    </body>
 </html>

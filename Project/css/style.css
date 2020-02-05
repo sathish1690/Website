@@ -1942,7 +1942,52 @@ span.total-dtls {
     font-weight: bold;
     padding-right: 10px;
 }
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background: #fff!important;
+    opacity: 1;
+}
+.daterangepicker.ltr.show-calendar.opensright {
+    z-index: 0;
+}
+.daterangepicker .drp-buttons .btn, .daterangepicker .drp-buttons .btn:hover, .daterangepicker .drp-buttons .btn:focus, .daterangepicker .drp-buttons .btn:active:focus {
+    width: auto;
+    padding: 7px 12px!important;
+    height: auto;
+    border-radius: 2px;
+	font-size:12px;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+       background-color: #0d508e!important;
+}
+td.off.available {
+    display: none;
+}
+td.today.active.start-date.available.in-range {
+    color: #fff!important;
+}
+td.today.available {
+    color: #000!important;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    color: transparent!important;
+	
+}
+td.today {
+    background: none;
+	color:#fff!important;
+}
+.start-date {
+ background: url(../img/calenderflight.dept.png) no-repeat center ;
+ width:30px;
+ height:30px;
+}
 
+.end-date{
+ background: url(../img/calenderflight.dest.png) no-repeat center;
+ width:30px;
+ height:30px;
+    
+}
 
 @media screen and (max-width: 768px) {
 	.side-collapse-container {

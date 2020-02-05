@@ -807,9 +807,12 @@
 			  $('input[name="book-date"]').daterangepicker({
 			     minDate: moment(),
 				 maxDate: moment().add(1, 'years'),
-				  autoUpdateInput: false,
+				   startDate: moment().startOf('hour'),
+					endDate: moment().startOf('hour').add(3, 'days'),
+				   autoApply: true,
+				   autoUpdateInput: true,
 				  locale: {
-					  cancelLabel: 'Clear'
+					 format: 'DD/MM/YYYY'
 				  }
 			  });
 			  $('input[name="book-date"]').on('apply.daterangepicker', function(ev, picker) {

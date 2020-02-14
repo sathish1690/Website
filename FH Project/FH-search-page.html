@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Llycafly</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5/5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href ="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+   </head>
+   <body>
+      <section class="menu-bar">
+         <nav class="navbar navbar-default">
+            <div class="container">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#"><img src="img/lycafly_logo.png"></a>
+               </div>
+               <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                     <li class="active"><a href="#">Home</a></li>
+                     <li><a href="#">Hotels</a></li>
+                     <li><a href="#">Flights</a></li>
+                     <li><a href="#">Flight + Hotel</a></li>
+                     <li><a href="#">Sports Travel</a></li>
+                     <li><a href="#">About Us</a></li>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </section>    
+	   <section class="fh-search-wrapper">
+		<div class="container">
+			 <div class="col-md-12 col-xs-12 col-sm-12 search-sort text-center">
+                     <div id="holidays-dis" style="margin-top:18px;">
+                        <div class="return-cty hotel-searchinput">
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Leaving from</label></span>
+                              <input type="text" class="form-control" id="destination" placeholder="" value="London, United Kingdom (LON-All Airports)">
+                              <!--<i class="material-icons">hotel</i>-->
+                           </div>
+                           <div class="form-group col-md-3">
+                              <span class="label-input"><label>Going to</label></span>
+                              <input type="text" class="form-control" id="destination" placeholder="" value="Chennai (and vicinity), India">
+                              <!--<i class="material-icons">hotel</i>-->
+                           </div>
+                           <div class="form-group col-md-3">
+						    <span class="label-input"><label>Dates</label></span>
+                               <input type="text" name="" class="form-control br-1" placeholder="mm/dd/yyyy" value="Fri, 14 Feb - to Sat, 22 Feb" readonly="readonly" >
+                              <!--<i class="material-icons">date_range</i>-->
+                           </div>
+                           <!--<div class="form-group col-md-2">
+						    <span class="label-input"><label>Check-out</label></span>
+                               <input type="text" name="" class="form-control br-1" placeholder="mm/dd/yyyy" readonly="readonly" >
+                             <!-- <i class="material-icons">date_range</i>--
+                           </div>-->
+                          <!-- <div class="form-group col-md-2">
+						    <span class="label-input"><label>Passengers</label></span>
+                              <input type="dropdown" class="form-control" id="passenger" placeholder="">
+                             <!-- <i class="material-icons">people</i>
+                           </div>-->
+						     <div class="col-md-2">
+                            <a href=""> <button class="btn btn-success btn-livesearch">Change search  <i class="material-icons">search</i></button></a>
+                        </div>
+                        </div>
+                      
+                     </div>
+		</div>
+     </section>	
+	 <div class="clearfix"></div>
+	  <section class="search-wrapper">
+         <section class="hotel-search">
+            <div class="container">
+			  <div class="col-md-12 page">
+					<div class="page__section">
+				<nav class="breadcrumb breadcrumb_type5" aria-label="Breadcrumb">
+				  <ol class="breadcrumb__list r-list">
+					<li class="breadcrumb__group">
+					  <span class="breadcrumb__point current_page" aria-current="page">
+					  <span class="current-page-cnt"><i class="material-icons">location_city</i>Choose your hotel</span></span>
+					 <span class="breadcrumb__divider" aria-hidden="true"><i class="material-icons">keyboard_arrow_right</i></span>
+					</li>
+					<li class="breadcrumb__group">
+					  <a href="#0" class="breadcrumb__point r-link"><i class="material-icons">hotel</i> Choose your room</a>
+					  <span class="breadcrumb__divider" aria-hidden="true"><i class="material-icons">keyboard_arrow_right</i></span>
+					</li>
+					<li class="breadcrumb__group">
+					  <a href="#0" class="breadcrumb__point r-link choose-flight"><i class="material-icons">flight</i> Choose your departure flight</a>
+					  <span class="breadcrumb__divider" aria-hidden="true"><i class="material-icons">keyboard_arrow_right</i> </span>
+					</li>
+					<li class="breadcrumb__group">
+					 <a href="#0" class="breadcrumb__point r-link choose-flight"><i class="material-icons">flight</i> Choose your return flight</a>
+					 
+					</li>
+				  </ol>
+				</nav>
+				
+			  </div>         
+			</div>
+			<div class="clearfix"></div>
+			 <div class="col-md-12 hotel-content">
+				<h2>Start by choosing your hotel</h2>
+				<p>The trip prices shown include Flight + Hotel, taxes and fees, but do not include baggage feesBaggage fees opens in a new window or other fees charged directly by the airline for the included flight. Flight-inclusive packages are ATOL protected.
+				</p>
+			 </div>
+
+               <div class="col-md-12 col-xs-12 col-sm-12 hotel-search-view">
+			       <div class="modal fade" id="lab-slide-bottom-popup" data-keyboard="false" data-backdrop="false">
+                  <div class="modal-header">
+                     <span class="modal-title" id="exampleModalLongTitle">Filter your results  </span>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                     </button>
+                  </div>
+                  <div class="lab-modal-body">
+				  <ul class="list-unstyled">
+					  <h4>Search by property name</h4>
+						<li>
+						   <div class="form-group filter-search">
+                               <input type="text" name="" class="form-control br-1">
+                              <i class="material-icons">location_city</i>
+                           </div>
+						</li>
+					</ul>
+						<div class="clearfix"></div>
+						<hr>
+                    <h4>Sort by</h4>
+                   <div class="Sortby">
+					<ul class="list-unstyled">
+						<li>
+						  <input id="sortby_id1" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id1">Recommended</label>
+						</li>
+						<li>
+						  <input id="sortby_id2" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id2">Price</label>
+						</li>
+						<li>
+						  <input id="sortby_id3" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id3">Best deals</label>
+						</li>
+						<li>
+						  <input id="sortby_id4" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id4">Guest rating</label>
+						</li>
+						<li>
+						  <input id="sortby_id5" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id5">Distance from airport</label>
+						</li>
+						<li>
+						  <input id="sortby_id6" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id6">Star rating</label>
+						</li>
+						<li>
+						  <input id="sortby_id7" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id7">Holiday rentals</label>
+						</li>
+					</ul>	
+					 </div>
+					<div class="clearfix"></div>
+					<hr>
+					
+					<ul class="list-unstyled">
+					     <h4>Your Budget</h4>
+						<li>
+						  <label class="check-container">Less than $400
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						  <label class="check-container">$400 to $800
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						   <label class="check-container">$800 to $1,200
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						   <label class="check-container">$1,200 to $1,800
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						
+						</li>
+						<li>
+						    <label class="check-container">Greater than $1,800
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+					</ul>
+					<div class="clearfix"></div>
+						<hr>
+					<div class="guestrating">
+				     <h4>Guest rating</h4>
+					<ul class="list-unstyled">
+						<li>
+						  <input id="guestrating_id1" type="radio" name="guestrating_radio" checked="checked">
+						  <label for="guestrating_id1">Any</label>
+						</li>
+						<li>
+						  <input id="guestrating_id2" type="radio" name="guestrating_radio" checked="checked">
+						  <label for="guestrating_id2">Wonderful 4.5+</label>
+						</li>
+						<li>
+						  <input id="guestrating_id3" type="radio" name="guestrating_radio" checked="checked">
+						  <label for="guestrating_id3">Very good 4+</label>
+						</li>
+						<li>
+						  <input id="guestrating_id4" type="radio" name="guestrating_radio" checked="checked">
+						  <label for="guestrating_id4">Good 3.5+</label>
+						</li>
+					</ul>
+                     	</div>	
+					<div class="clearfix"></div>
+						<hr>
+						<ul class="list-unstyled">
+					     <h4>Payment Type</h4>
+						<li>
+						  <label class="check-container">Free cancellation
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						  <label class="check-container">Reserve now, pay at the property
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						 
+						</li>
+					</ul>
+						<div class="clearfix"></div>
+					<hr>	
+						<ul class="list-unstyled">
+					     <h4>Filter by</h4>
+						 <h5>Popular Filters</h5>
+						<li>
+						  <label class="check-container">Breakfast included
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">Hotel
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						  <label class="check-container">Pool
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">Apartment
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+					</ul>
+					<div class="clearfix"></div>
+					<hr>
+                    	
+                   <div class="Sortby area">
+				     <h4>Area</h4>
+					<ul class="list-unstyled">
+						<li>
+						  <input id="area_id1" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id1">Chennai</label>
+						</li>
+						<li>
+						  <input id="area_id2" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id2">T Nagar</label>
+						</li>
+						<li>
+						  <input id="area_id3" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id3">Chennai (MAA-Chennai Intl.)</label>
+						</li>
+						<li>
+						  <input id="area_id4" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id4">Central Chennai</label>
+						</li>
+						<li>
+						  <input id="area_id5" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id5">Nungambakkam</label>
+						</li>
+						<li>
+						  <input id="area_id6" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id6">Guindy</label>
+						</li>
+						<li>
+						  <input id="area_id7" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id7">Sholinganallur</label>
+						</li>
+						<p><a href="javascript:void(0);">See more</a></p>		
+					</ul>
+                     	</div>	
+						<div class="clearfix"></div>
+						<hr>
+                   <div class="Sortby popularloc">
+				     <h4>Popular Locations</h4>
+					<ul class="list-unstyled">
+						<li>
+						  <input id="popularloc_id1" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id1">Marina Beach</label>
+						</li>
+						<li>
+						  <input id="popularloc_id2" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id2">Kapaleeswarar Temple</label>
+						</li>
+						<li>
+						  <input id="popularloc_id3" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id3">Apollo Hospital</label>
+						</li>
+						<li>
+						  <input id="popularloc_id4" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id4">Sankara Nethralaya</label>
+						</li>
+						<li>
+						  <input id="popularloc_id5" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id5">Chennai Trade Centre</label>
+						</li>
+						<li>
+						  <input id="popularloc_id6" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id6">MGM Dizzee World</label>
+						</li>
+						<li>
+						  <input id="popularloc_id7" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id7">Old Mahabalipuram Road</label>
+						</li>
+						<p><a href="javascript:void(0);">See more</a></p>		
+					</ul>
+                     	</div>	
+						<div class="clearfix"></div>
+						<hr>
+						<ul class="list-unstyled">
+					     <h4>Amenities</h4>
+						<li>
+						  <label class="check-container">Breakfast included
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">Pool
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						  <label class="check-container">Free airport shuttle
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						  <label class="check-container">Free WiFi
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<p><a href="javascript:void(0);">See more</a></p>		
+					</ul>			
+						<div class="clearfix"></div>
+						<hr>
+						<ul class="list-unstyled">
+					     <h4>Accessibility</h4>
+						<li>
+						 <label class="check-container">Accessible bathroom
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">Roll-in shower
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">In-room accessibility
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+					</ul>						
+						<div class="clearfix"></div>
+						<hr>
+						<ul class="list-unstyled">
+					     <h4>Trip Type</h4>
+						<li>
+						 <label class="check-container">Business friendly
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">Family friendly
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+					</ul>
+                  </div>
+                  <!-- /.modal-body -->
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-secondary" onclick='selectAll()' />Select All</button>
+                     <button type="button" class="btn btn-secondary"  onclick='UnSelectAll()'/> Clear All </button>
+                  </div>
+               </div>
+               <div class="hidden-md visible-xs visible-sm filter-button text-center">
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#lab-slide-bottom-popup">
+                  <span>Filters</span><i class="material-icons">tune</i> </button>
+                  <!--<button id="show" ></button>-->
+               </div>
+               <div class="col-md-3 sidebar-filter hidden-xs hidden-sm">
+			     <div class="search-page-map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15549.148649939774!2d80.19170003221627!3d13.017376409638494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sHotels!5e0!3m2!1sen!2sin!4v1581495679197!5m2!1sen!2sin" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					<p>View Map</p>
+				 </div>
+			      <ul class="list-unstyled">
+					  <h4>Search by property name</h4>
+						<li>
+						   <div class="form-group filter-search">
+                               <input type="text" name="" class="form-control br-1">
+                              <i class="material-icons">location_city</i>
+                           </div>
+						</li>
+					</ul>
+						<div class="clearfix"></div>
+						<hr>
+			      <h4>Sort by</h4>
+                   <div class="Sortby">
+					<ul class="list-unstyled">
+						<li>
+						  <input id="sortby_id1" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id1">Recommended</label>
+						</li>
+						<li>
+						  <input id="sortby_id2" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id2">Price</label>
+						</li>
+						<li>
+						  <input id="sortby_id3" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id3">Best deals</label>
+						</li>
+						<li>
+						  <input id="sortby_id4" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id4">Guest rating</label>
+						</li>
+						<li>
+						  <input id="sortby_id5" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id5">Distance from airport</label>
+						</li>
+						<li>
+						  <input id="sortby_id6" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id6">Star rating</label>
+						</li>
+						<li>
+						  <input id="sortby_id7" type="radio" name="sortby" checked="checked">
+						  <label for="sortby_id7">Holiday rentals</label>
+						</li>
+					</ul>	
+					 </div>
+					<div class="clearfix"></div>
+					<hr>
+					
+					<ul class="list-unstyled">
+					     <h4>Your Budget</h4>
+						<li>
+						  <label class="check-container">Less than $400
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						  <label class="check-container">$400 to $800
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						   <label class="check-container">$800 to $1,200
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						   <label class="check-container">$1,200 to $1,800
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						
+						</li>
+						<li>
+						    <label class="check-container">Greater than $1,800
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+					</ul>
+					<div class="clearfix"></div>
+						<hr>
+					<div class="guestrating">
+				     <h4>Guest rating</h4>
+					<ul class="list-unstyled">
+						<li>
+						  <input id="guestrating_id1" type="radio" name="guestrating_radio" checked="checked">
+						  <label for="guestrating_id1">Any</label>
+						</li>
+						<li>
+						  <input id="guestrating_id2" type="radio" name="guestrating_radio" checked="checked">
+						  <label for="guestrating_id2">Wonderful 4.5+</label>
+						</li>
+						<li>
+						  <input id="guestrating_id3" type="radio" name="guestrating_radio" checked="checked">
+						  <label for="guestrating_id3">Very good 4+</label>
+						</li>
+						<li>
+						  <input id="guestrating_id4" type="radio" name="guestrating_radio" checked="checked">
+						  <label for="guestrating_id4">Good 3.5+</label>
+						</li>
+					</ul>
+                     	</div>	
+					<div class="clearfix"></div>
+						<hr>
+						<ul class="list-unstyled">
+					     <h4>Payment Type</h4>
+						<li>
+						  <label class="check-container">Free cancellation
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						  <label class="check-container">Reserve now, pay at the property
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						 
+						</li>
+					</ul>
+						<div class="clearfix"></div>
+					<hr>	
+						<ul class="list-unstyled">
+					     <h4>Filter by</h4>
+						 <h5>Popular Filters</h5>
+						<li>
+						  <label class="check-container">Breakfast included
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">Hotel
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						  <label class="check-container">Pool
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">Apartment
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+					</ul>
+					<div class="clearfix"></div>
+					<hr>
+                    	
+                   <div class="Sortby area">
+				     <h4>Area</h4>
+					<ul class="list-unstyled">
+						<li>
+						  <input id="area_id1" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id1">Chennai</label>
+						</li>
+						<li>
+						  <input id="area_id2" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id2">T Nagar</label>
+						</li>
+						<li>
+						  <input id="area_id3" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id3">Chennai (MAA-Chennai Intl.)</label>
+						</li>
+						<li>
+						  <input id="area_id4" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id4">Central Chennai</label>
+						</li>
+						<li>
+						  <input id="area_id5" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id5">Nungambakkam</label>
+						</li>
+						<li>
+						  <input id="area_id6" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id6">Guindy</label>
+						</li>
+						<li>
+						  <input id="area_id7" type="radio" name="area_radio1" checked="checked">
+						  <label for="area_id7">Sholinganallur</label>
+						</li>
+						<p><a href="javascript:void(0);">See more</a></p>		
+					</ul>
+                     	</div>	
+						<div class="clearfix"></div>
+						<hr>
+                   <div class="Sortby popularloc">
+				     <h4>Popular Locations</h4>
+					<ul class="list-unstyled">
+						<li>
+						  <input id="popularloc_id1" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id1">Marina Beach</label>
+						</li>
+						<li>
+						  <input id="popularloc_id2" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id2">Kapaleeswarar Temple</label>
+						</li>
+						<li>
+						  <input id="popularloc_id3" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id3">Apollo Hospital</label>
+						</li>
+						<li>
+						  <input id="popularloc_id4" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id4">Sankara Nethralaya</label>
+						</li>
+						<li>
+						  <input id="popularloc_id5" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id5">Chennai Trade Centre</label>
+						</li>
+						<li>
+						  <input id="popularloc_id6" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id6">MGM Dizzee World</label>
+						</li>
+						<li>
+						  <input id="popularloc_id7" type="radio" name="popularloc" checked="checked">
+						  <label for="popularloc_id7">Old Mahabalipuram Road</label>
+						</li>
+						<p><a href="javascript:void(0);">See more</a></p>		
+					</ul>
+                     	</div>	
+						<div class="clearfix"></div>
+						<hr>
+						<ul class="list-unstyled">
+					     <h4>Amenities</h4>
+						<li>
+						  <label class="check-container">Breakfast included
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">Pool
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						  <label class="check-container">Free airport shuttle
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						  <label class="check-container">Free WiFi
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<p><a href="javascript:void(0);">See more</a></p>		
+					</ul>			
+						<div class="clearfix"></div>
+						<hr>
+						<ul class="list-unstyled">
+					     <h4>Accessibility</h4>
+						<li>
+						 <label class="check-container">Accessible bathroom
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">Roll-in shower
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">In-room accessibility
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+					</ul>						
+						<div class="clearfix"></div>
+						<hr>
+						<ul class="list-unstyled">
+					     <h4>Trip Type</h4>
+						<li>
+						 <label class="check-container">Business friendly
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+						<li>
+						 <label class="check-container">Family friendly
+								<input type="checkbox" name="search-select" class="search-checkbox check2">
+								<span class="checkmark"></span>
+						  </label>
+						</li>
+					</ul>						
+				  
+               </div>
+               <div class="col-md-9 col-xs-12 col-sm-12 mobile-view">
+                  <a href="FH-details-page.html">
+				  <div class="col-md-12 col-xs-12 col-sm-12 FH-search-details" style="padding:0px">
+					 <div class="col-md-4 col-xs-12 col-sm-4 FH-gallery" style="padding:0px">
+					  <div class="owl-carousel owl-theme">
+							<div class="">
+								<img src="img/hotel/h1.jpg">
+							</div>
+						</div>
+					 </div>
+					 <div class="col-md-8 col-xs-12 col-sm-8" style="padding:0px">
+					   <div class="col-md-7 col-xs-12 col-sm-6">
+						<h2 class="hotel-name">Park Hyatt Chennai
+							<span class="star-rating">
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+							</span>
+						</h2>	
+						 <p>Guindy</p>
+						</div>
+						 <div class="col-md-5 col-xs-12 col-sm-6 text-right">
+						<p class="search-viewed">
+							<span><i class="material-icons">remove_red_eye</i></span> Viewed
+						</p>		
+						<p class="review-dtls"><span class="review-score1">4.5/5 </span> </p>
+						 <p class="rating-dtls1"> Wonderful!</p>
+						  <p> <span class="noofreview1">(270 reviews)</span></p>
+						  <p class="recommended">In high demand</p>
+						  <p class="hotel-price-offer"> 
+							<span class="hotel-price1"><strike>$1347</strike></span> <span class="hotel-price2">$1247</span> 
+						  </p>
+						  
+						</div>
+						 <span class="text-right fare-details">per person price includes flight+hotel, taxes and fees</span>
+					 </div>
+				  </div>
+				  </a>
+				  <a href="FH-details-page.html">
+                  <div class="col-md-12 col-xs-12 col-sm-12 FH-search-details" style="padding:0px">
+					 <div class="col-md-4 col-xs-12 col-sm-4 FH-gallery" style="padding:0px">
+					  <div class="owl-carousel owl-theme">
+							<div class="">
+								<img src="img/hotel/h6.jpg">
+							</div>
+						</div>
+					 </div>
+					 <div class="col-md-8 col-xs-12 col-sm-8" style="padding:0px">
+					   <div class="col-md-7 col-xs-12 col-sm-6">
+						<h2 class="hotel-name">Disney's Hollywood Chennai
+							<span class="star-rating">
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+							</span>
+						</h2>	
+						 <p>Adaiyar</p>
+						</div>
+						 <div class="col-md-5 col-xs-12 col-sm-6 text-right content-dtls">
+						<!--<p class="search-viewed">
+							<span><i class="material-icons">remove_red_eye</i></span> Viewed
+						</p>	-->	
+						<p class="review-dtls"><span class="review-score1">4/5 </span> </p>
+						 <p class="rating-dtls1"> Good!</p>
+						  <p> <span class="noofreview1">(270 reviews)</span></p>
+						  <p class="hotel-price-offer"> 
+							<span class="hotel-price1"><strike>$1147</strike></span> <span class="hotel-price2">$1010</span> 
+						  </p>
+						  
+						</div>
+						 <span class="text-right fare-details">per person price includes flight+hotel, taxes and fees</span>
+					 </div>
+				  </div>
+				    </a>
+				  <a href="FH-details-page.html">
+                  <div class="col-md-12 col-xs-12 col-sm-12 FH-search-details" style="padding:0px">
+					 <div class="col-md-4 col-xs-12 col-sm-4 FH-gallery" style="padding:0px">
+					  <div class="owl-carousel owl-theme">
+							<div class="">
+								<img src="img/hotel/h9.jpg">
+							</div>
+						</div>
+					 </div>
+					 <div class="col-md-8 col-xs-12 col-sm-8" style="padding:0px">
+					   <div class="col-md-7 col-xs-12 col-sm-6">
+						<h2 class="hotel-name">Courtyard Chennai
+							<span class="star-rating">
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+							</span>
+						</h2>	
+						 <p>Anna Salai</p>
+						</div>
+						 <div class="col-md-5 col-xs-12 col-sm-6 text-right content-dtls">
+						<!--<p class="search-viewed">
+							<span><i class="material-icons">remove_red_eye</i></span> Viewed
+						</p>	-->	
+						<p class="review-dtls"><span class="review-score1">4/5 </span> </p>
+						 <p class="rating-dtls1"> Good!</p>
+						  <p> <span class="noofreview1">(234 reviews)</span></p>
+						  <p class="hotel-price-offer"> 
+							<span class="hotel-price1"><strike>$989</strike></span> <span class="hotel-price2">$870</span> 
+						  </p>
+						  
+						</div>
+						 <span class="text-right fare-details">per person price includes flight+hotel, taxes and fees</span>
+					 </div>
+				  </div>
+                  </a>
+                  <a href="FH-details-page.html">
+				  <div class="col-md-12 col-xs-12 col-sm-12 FH-search-details" style="padding:0px">
+					 <div class="col-md-4 col-xs-12 col-sm-4 FH-gallery" style="padding:0px">
+					  <div class="owl-carousel owl-theme">
+							<div class="">
+								<img src="img/hotel/h1.jpg">
+							</div>
+						</div>
+					 </div>
+					 <div class="col-md-8 col-xs-12 col-sm-8" style="padding:0px">
+					   <div class="col-md-7 col-xs-12 col-sm-6">
+						<h2 class="hotel-name">Park Hyatt Chennai
+							<span class="star-rating">
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+							</span>
+						</h2>	
+						 <p>Guindy</p>
+						</div>
+						 <div class="col-md-5 col-xs-12 col-sm-6 text-right">
+						<p class="search-viewed">
+							<span><i class="material-icons">remove_red_eye</i></span> Viewed
+						</p>		
+						<p class="review-dtls"><span class="review-score1">4.5/5 </span> </p>
+						 <p class="rating-dtls1"> Wonderful!</p>
+						  <p> <span class="noofreview1">(270 reviews)</span></p>
+						  <p class="recommended">In high demand</p>
+						  <p class="hotel-price-offer"> 
+							<span class="hotel-price1"><strike>$1347</strike></span> <span class="hotel-price2">$1247</span> 
+						  </p>
+						  
+						</div>
+						 <span class="text-right fare-details">per person price includes flight+hotel, taxes and fees</span>
+					 </div>
+				  </div>
+				  </a>
+				  <a href="FH-details-page.html">
+                  <div class="col-md-12 col-xs-12 col-sm-12 FH-search-details" style="padding:0px">
+					 <div class="col-md-4 col-xs-12 col-sm-4 FH-gallery" style="padding:0px">
+					  <div class="owl-carousel owl-theme">
+							<div class="">
+								<img src="img/hotel/h6.jpg">
+							</div>
+						</div>
+					 </div>
+					 <div class="col-md-8 col-xs-12 col-sm-8" style="padding:0px">
+					   <div class="col-md-7 col-xs-12 col-sm-6">
+						<h2 class="hotel-name">Disney's Hollywood Chennai
+							<span class="star-rating">
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+							</span>
+						</h2>	
+						 <p>Adaiyar</p>
+						</div>
+						 <div class="col-md-5 col-xs-12 col-sm-6 text-right content-dtls">
+						<!--<p class="search-viewed">
+							<span><i class="material-icons">remove_red_eye</i></span> Viewed
+						</p>	-->	
+						<p class="review-dtls"><span class="review-score1">4/5 </span> </p>
+						 <p class="rating-dtls1"> Good!</p>
+						  <p> <span class="noofreview1">(270 reviews)</span></p>
+						  <p class="hotel-price-offer"> 
+							<span class="hotel-price1"><strike>$1147</strike></span> <span class="hotel-price2">$1010</span> 
+						  </p>
+						  
+						</div>
+						 <span class="text-right fare-details">per person price includes flight+hotel, taxes and fees</span>
+					 </div>
+				  </div>
+				    </a>
+				  <a href="FH-details-page.html">
+                  <div class="col-md-12 col-xs-12 col-sm-12 FH-search-details" style="padding:0px">
+					 <div class="col-md-4 col-xs-12 col-sm-4 FH-gallery" style="padding:0px">
+					  <div class="owl-carousel owl-theme">
+							<div class="">
+								<img src="img/hotel/h9.jpg">
+							</div>
+						</div>
+					 </div>
+					 <div class="col-md-8 col-xs-12 col-sm-8" style="padding:0px">
+					   <div class="col-md-7 col-xs-12 col-sm-6">
+						<h2 class="hotel-name">Courtyard Chennai
+							<span class="star-rating">
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+								<i class="material-icons">star</i>
+							</span>
+						</h2>	
+						 <p>Anna Salai</p>
+						</div>
+						 <div class="col-md-5 col-xs-12 col-sm-6 text-right content-dtls">
+						<!--<p class="search-viewed">
+							<span><i class="material-icons">remove_red_eye</i></span> Viewed
+						</p>	-->	
+						<p class="review-dtls"><span class="review-score1">4/5 </span> </p>
+						 <p class="rating-dtls1"> Good!</p>
+						  <p> <span class="noofreview1">(234 reviews)</span></p>
+						  <p class="hotel-price-offer"> 
+							<span class="hotel-price1"><strike>$989</strike></span> <span class="hotel-price2">$870</span> 
+						  </p>
+						  
+						</div>
+						 <span class="text-right fare-details">per person price includes flight+hotel, taxes and fees</span>
+					 </div>
+				  </div>
+                  </a>
+               </div>
+                </div>
+            </div>
+         </section>
+      </section>
+       <section class="footer" style="padding: 20px 0px 10px 0px;background:#0e508e;color: #fff;">
+		 <div class="container">
+			<p class="text-center">© 2020 lycafly, Inc, an lycafly Group Company. All rights reserved.</p>
+		 </div>
+	  </section>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	   <script src="js/moment.min.js"></script>
+      <script src="js/daterangepicker.js"></script>
+	   <script>
+		   $('.owl-carousel').owlCarousel({
+			loop:true,
+			margin:10,
+			nav:true,
+			navText:false,
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:1
+				},
+				1000:{
+					items:1
+				}
+			}
+		})	
+      </script>
+	  <script>
+			$(function() {
+			  $('input[name="book-date"]').daterangepicker({
+			     minDate: moment(),
+				 maxDate: moment().add(1, 'years'),
+				  autoUpdateInput: false,
+				   startDate: moment().startOf('hour'),
+					endDate: moment().startOf('hour').add(3, 'days'),
+				   autoApply: true,
+				   autoUpdateInput: true,
+				  locale: {
+					  cancelLabel: 'Clear'
+				  }
+			  });
+			  $('input[name="book-date"]').on('apply.daterangepicker', function(ev, picker) {
+				  $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+			  });
+			  $('input[name="book-date"]').on('cancel.daterangepicker', function(ev, picker) {
+				  $(this).val('');
+			  });
+			});
+		</script>
+      <script language="JavaScript">
+         $(document).ready(function() {
+          $('.lab-slide-up').find('a').attr('data-toggle', 'modal');
+          $('.lab-slide-up').find('a').attr('data-target', '#lab-slide-bottom-popup');
+          });
+          });
+      </script>
+      <script type="text/javascript">
+         function showHideDiv(ele) {
+         	var srcElement = document.getElementById(ele);
+         	if (srcElement != null) {
+         		if (srcElement.style.display == "block") {
+         			srcElement.style.display = 'none';
+         		}
+         		else {
+         			srcElement.style.display = 'block';
+         		}
+         		return false;
+         	}
+         }
+         $('.top').on('click', function() {
+         	$parent_box = $(this).closest('.box');
+         	$parent_box.siblings().find('.bottom').slideUp();
+         	$parent_box.find('.bottom').slideToggle(1000, 'swing');
+         });
+      </script>
+	  
+   </body>
+</html>

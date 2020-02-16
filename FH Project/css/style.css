@@ -1450,7 +1450,276 @@ p.seeproperty {
     position: relative;
     right: 0px;
 }
+.fhroom-dtls {
+    float: right;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-weight: bold;
+    color: #0e508e;
+}
+.fhroom-dtls h3 {
+    font-size: 28px;
+}
+.fhroom-dtls h5 {
+    font-size: 28px;
+}
+.fh-details-roomdetails {
+    background: #fff;
+    padding-top: 13px!important;
+    border-radius: 6px;
+    padding-bottom: 0px!important;
+    }
+h5.fhpernight {
+    font-size: 13px;
+    margin: -7px 0px 0px 6px;
+    font-weight: normal;
+    color: #616161;
+}
 
+a.btn.btn-primary.btnselect {
+    border: none;
+    background: #0e508e;
+    color: #fff;
+}
+.fh-roomtype p {
+    margin: 0px;
+    /* padding: 0px; */
+    line-height: 22px;
+    color: #616161;
+    font-weight: bold;
+}
+.fh-roomtype h3 {
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-weight: bold;
+    color: #524343;
+    font-size: 18px;
+}
+a.showinfrm {margin-top: 0px;display: block;}
+
+.fh-roomtype {
+    padding-bottom: 17px;
+}
+a.showinfrm .material-icons {
+    position: relative;
+    top: 9px;
+}
+.fh-room-details {
+    background: #fff;
+    border: 3px solid #0e508e;
+    margin-bottom: 30px;
+}
+.fh-choose-room {
+	background: #0e508e;
+	margin: 0px;
+	color: #fff;
+	font-size: 21px;
+	font-weight: bold;
+	padding: 12px;
+	}
+	.fh-roomtype .material-icons{
+    position: relative;
+    font-size: 15px;
+    top: 3px;
+    right: 3px;
+    color: #901515;
+}
+.roomtype-heading {
+    background: #e5e5e5;
+    color: #000;
+    font-size: 15px;
+    padding: 12px;
+}
+.trip-details {
+    background: #e5e5e5;
+    color: #000;
+    font-size: 15px;
+    padding: 12px;
+	margin-top:0px;
+}
+.room-total-price {font-size: 20px;font-weight: bold;}
+
+span.includetraveller {
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+}
+.fh-details-about {
+    /* background: #fff; */
+    padding: 0px 0px!important;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.fh-details-about h6 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #616161;
+    margin: 0px;
+}
+
+
+.fh-details-about h3{
+    margin: 0px;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #0e508e;
+}
+.fh-details-about p {
+    margin: 1px 0px 5px 0px;
+    line-height: 24px;
+    font-size: 13px;
+    font-weight: normal;
+}
+.fhdetail-about-divider {
+    border: 2px solid #0e508e;
+}
+.fh-amenities h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0e508e;
+}
+.fh-amenities ul {
+    padding: 0px;
+}
+h6.fh-check {
+    font-weight: normal;
+    font-size: 15px;
+    margin: 11px 0px;
+}
+.flight-search-details {
+    background: #fff;
+    padding: 15px 0px 5px 15px;
+    margin-bottom: 22px;
+}
+span.flight-price2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+p.return-flight {
+    font-size: 14px;
+    color: #868585;
+}
+
+p.flight-timing {
+    font-size: 15px;
+    color: #868585;
+}
+p.flight-hours {
+    font-size: 15px;
+    color: #868585;
+}
+
+span.flight-facilities .material-icons {
+    font-size: 19px;
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+
+p.flight-arivdest {
+    font-size: 15px;
+    color: #868585;
+}
+
+p.flight-review {
+    font-size: 14px;
+    color: #868585;
+}
+span.baggage-dtls {
+    font-size: 13px;
+    color: #868585;
+    display: block;
+    margin-bottom: 5px;
+}
+span.flight-fare-dtls {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+span.bag-dtls .material-icons {
+    font-size: 17px;
+    position: relative;
+    top: 3px;
+}
+.flight-hoteltls img {
+    height: 70px;
+    border-radius: 100%;
+    width: 70px;
+    margin-top: 20px;
+}
+.flight-hoteltls p {
+    margin: 0px;
+}
+.selected-hotel-dtls {
+    background: #fff;
+    padding: 0px 0px 20px 0px;
+    border-top: 3px solid #0e508e;
+    border-radius: 6px;
+}
+.fh-fare-dtls1 {
+    padding-top: 18px;
+}
+.fh-fare-dtls p {
+    padding-top: 24px;
+}
+.fh-fare-dtls1 p {
+    margin: 6px 0px 0px 0px;
+}
+span.start-price-dtls {
+    float: right;
+}
+
+span.package-save {
+    color: #2f7000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+span.pack-price-dtls {color: #2f7000;
+    font-size: 14px;
+    font-weight: bold;
+        float: right;
+}
+h3.hotel-dtl-heading {
+    font-size: 20px;
+    color: #0e508e;
+    font-weight: bold;
+}
+span.total-price-dtls {
+        float: right;
+}
+.flight-dtls-content h2 {
+    font-size: 22px;
+    color: #0e508e;
+    font-weight: bold;
+}
+.flight-dtls-content h2 span{
+    font-size: 16px;
+    color: #8f9498;
+    font-weight: bold;
+}
+.dest .material-icons {
+    font-size: 16px;
+    position: relative;
+    top: 1px;
+	right: 3px;
+}
+.fh-search-wrapper ul {
+    padding: 13px 4px 2px 0px;
+}
+span.change-flight {
+    font-size: 14px!important;
+    font-weight: normal!important;
+    float: right;
+} 
+p.flight-loc .material-icons {
+    font-size:  12px;
+    position: relative;
+    right: 0px;
+}
 /**media query for mobile view **/
 
 @media(min-width:320px) and (max-width:479px) {
